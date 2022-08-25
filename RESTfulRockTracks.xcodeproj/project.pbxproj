@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */; };
 		7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */; };
-		7B3AD93828B7EB0D00B69081 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* ViewController.swift */; };
-		7B3AD93B28B7EB0D00B69081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93928B7EB0D00B69081 /* Main.storyboard */; };
-		7B3AD93E28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93C28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodeld */; };
+		7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */; };
+		7B3AD93B28B7EB0D00B69081 /* MusicSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93928B7EB0D00B69081 /* MusicSearch.storyboard */; };
+		7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93C28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld */; };
 		7B3AD94028B7EB0E00B69081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93F28B7EB0E00B69081 /* Assets.xcassets */; };
 		7B3AD94328B7EB0E00B69081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD94128B7EB0E00B69081 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,8 +20,8 @@
 		7B3AD93028B7EB0D00B69081 /* RESTfulRockTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTfulRockTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B3AD93728B7EB0D00B69081 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7B3AD93A28B7EB0D00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewController.swift; sourceTree = "<group>"; };
+		7B3AD93A28B7EB0D00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MusicSearch.storyboard; sourceTree = "<group>"; };
 		7B3AD93D28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RESTfulRockTracks.xcdatamodel; sourceTree = "<group>"; };
 		7B3AD93F28B7EB0E00B69081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B3AD94228B7EB0E00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,16 +58,80 @@
 		7B3AD93228B7EB0D00B69081 /* RESTfulRockTracks */ = {
 			isa = PBXGroup;
 			children = (
-				7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */,
-				7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */,
-				7B3AD93728B7EB0D00B69081 /* ViewController.swift */,
-				7B3AD93928B7EB0D00B69081 /* Main.storyboard */,
+				7B3AD94B28B82D7C00B69081 /* Application */,
+				7B3AD94A28B82CDB00B69081 /* Resources */,
+				7B3AD94E28B82DE600B69081 /* Presentation */,
+				7B3AD94C28B82DC900B69081 /* Domain */,
+				7B3AD94D28B82DD600B69081 /* Data */,
+			);
+			path = RESTfulRockTracks;
+			sourceTree = "<group>";
+		};
+		7B3AD94A28B82CDB00B69081 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				7B3AD93F28B7EB0E00B69081 /* Assets.xcassets */,
 				7B3AD94128B7EB0E00B69081 /* LaunchScreen.storyboard */,
 				7B3AD94428B7EB0E00B69081 /* Info.plist */,
-				7B3AD93C28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodeld */,
 			);
-			path = RESTfulRockTracks;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B3AD94B28B82D7C00B69081 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */,
+				7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7B3AD94C28B82DC900B69081 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7B3AD94D28B82DD600B69081 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7B3AD95028B82E8700B69081 /* PersistentStorages */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7B3AD94E28B82DE600B69081 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7B3AD94F28B82DEE00B69081 /* MusicSearchFlow */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7B3AD94F28B82DEE00B69081 /* MusicSearchFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */,
+				7B3AD93928B7EB0D00B69081 /* MusicSearch.storyboard */,
+			);
+			path = MusicSearchFlow;
+			sourceTree = "<group>";
+		};
+		7B3AD95028B82E8700B69081 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				7B3AD95128B82E8E00B69081 /* CoreDataStorage */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		7B3AD95128B82E8E00B69081 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				7B3AD93C28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +194,7 @@
 			files = (
 				7B3AD94328B7EB0E00B69081 /* LaunchScreen.storyboard in Resources */,
 				7B3AD94028B7EB0E00B69081 /* Assets.xcassets in Resources */,
-				7B3AD93B28B7EB0D00B69081 /* Main.storyboard in Resources */,
+				7B3AD93B28B7EB0D00B69081 /* MusicSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B3AD93828B7EB0D00B69081 /* ViewController.swift in Sources */,
+				7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */,
 				7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */,
-				7B3AD93E28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodeld in Sources */,
+				7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */,
 				7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,12 +215,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B3AD93928B7EB0D00B69081 /* Main.storyboard */ = {
+		7B3AD93928B7EB0D00B69081 /* MusicSearch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B3AD93A28B7EB0D00B69081 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MusicSearch.storyboard;
 			sourceTree = "<group>";
 		};
 		7B3AD94128B7EB0E00B69081 /* LaunchScreen.storyboard */ = {
@@ -293,10 +357,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L64SLY6QL8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RESTfulRockTracks/Info.plist;
+				INFOPLIST_FILE = RESTfulRockTracks/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MusicSearch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,10 +385,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L64SLY6QL8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RESTfulRockTracks/Info.plist;
+				INFOPLIST_FILE = RESTfulRockTracks/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MusicSearch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -364,13 +428,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7B3AD93C28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodeld */ = {
+		7B3AD93C28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				7B3AD93D28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodel */,
 			);
 			currentVersion = 7B3AD93D28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodel */;
-			path = RESTfulRockTracks.xcdatamodeld;
+			path = CoreDataStorage.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
