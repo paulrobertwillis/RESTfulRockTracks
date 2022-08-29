@@ -19,7 +19,7 @@
 		7B0C2AA128BD2FED00BC95A8 /* DataTransferServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA028BD2FED00BC95A8 /* DataTransferServiceTests.swift */; };
 		7B0C2AA328BD300000BC95A8 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA228BD300000BC95A8 /* DataTransferService.swift */; };
 		7B0C2AA528BD309600BC95A8 /* DomainEntityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA428BD309600BC95A8 /* DomainEntityMock.swift */; };
-		7B0C2AA728BD310400BC95A8 /* ResponseDTOMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA628BD310400BC95A8 /* ResponseDTOMock.swift */; };
+		7B0C2AA728BD310400BC95A8 /* ResponseDTOMock+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */; };
 		7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */; };
 		7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */; };
 		7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */; };
@@ -53,7 +53,7 @@
 		7B0C2AA028BD2FED00BC95A8 /* DataTransferServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferServiceTests.swift; sourceTree = "<group>"; };
 		7B0C2AA228BD300000BC95A8 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		7B0C2AA428BD309600BC95A8 /* DomainEntityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainEntityMock.swift; sourceTree = "<group>"; };
-		7B0C2AA628BD310400BC95A8 /* ResponseDTOMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDTOMock.swift; sourceTree = "<group>"; };
+		7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDTOMock+Mapping.swift"; sourceTree = "<group>"; };
 		7B3AD93028B7EB0D00B69081 /* RESTfulRockTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTfulRockTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 				7B0C2A8D28BD2B3900BC95A8 /* NetworkServiceMock.swift */,
 				7B0C2A8F28BD2B8100BC95A8 /* NetworkRequestPerformerMock.swift */,
 				7B0C2AA428BD309600BC95A8 /* DomainEntityMock.swift */,
-				7B0C2AA628BD310400BC95A8 /* ResponseDTOMock.swift */,
+				7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 				7B0C2AA528BD309600BC95A8 /* DomainEntityMock.swift in Sources */,
 				7B0C2A8E28BD2B3900BC95A8 /* NetworkServiceMock.swift in Sources */,
 				7B0C2A8B28BD2B0000BC95A8 /* NetworkRequestPerformerTests.swift in Sources */,
-				7B0C2AA728BD310400BC95A8 /* ResponseDTOMock.swift in Sources */,
+				7B0C2AA728BD310400BC95A8 /* ResponseDTOMock+Mapping.swift in Sources */,
 				7B0C2AA128BD2FED00BC95A8 /* DataTransferServiceTests.swift in Sources */,
 				7B0C2A8728BD292600BC95A8 /* NetworkServiceTests.swift in Sources */,
 				7B0C2A9A28BD2EE800BC95A8 /* ResponseDecoderTests.swift in Sources */,
