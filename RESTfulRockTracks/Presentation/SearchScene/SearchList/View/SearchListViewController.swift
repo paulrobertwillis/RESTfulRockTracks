@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchListViewController: UIViewController, StoryboardInstantiable {
+class SearchListViewController: UITableViewController, StoryboardInstantiable {
     
     // MARK: - Private Properties
     
