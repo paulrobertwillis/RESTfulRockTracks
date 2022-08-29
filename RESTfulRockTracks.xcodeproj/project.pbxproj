@@ -22,6 +22,10 @@
 		7B0C2AA728BD310400BC95A8 /* ResponseDTOMock+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */; };
 		7B0C2AAA28BD366500BC95A8 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA928BD366500BC95A8 /* SearchResult.swift */; };
 		7B0C2AAD28BD36B700BC95A8 /* SearchResultsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AAC28BD36B700BC95A8 /* SearchResultsResponseDTO.swift */; };
+		7B0C2AB028BD3B7000BC95A8 /* SearchResultsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AAF28BD3B7000BC95A8 /* SearchResultsRepositoryProtocol.swift */; };
+		7B0C2AB328BD3BBB00BC95A8 /* SearchResultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AB228BD3BBB00BC95A8 /* SearchResultsRepository.swift */; };
+		7B0C2AB628BD3CBB00BC95A8 /* SearchResultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AB528BD3CBB00BC95A8 /* SearchResultsRepositoryTests.swift */; };
+		7B0C2AB828BD3D0100BC95A8 /* SearchResultsDataTransferServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AB728BD3D0100BC95A8 /* SearchResultsDataTransferServiceMock.swift */; };
 		7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */; };
 		7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */; };
 		7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */; };
@@ -58,6 +62,10 @@
 		7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDTOMock+Mapping.swift"; sourceTree = "<group>"; };
 		7B0C2AA928BD366500BC95A8 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		7B0C2AAC28BD36B700BC95A8 /* SearchResultsResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsResponseDTO.swift; sourceTree = "<group>"; };
+		7B0C2AAF28BD3B7000BC95A8 /* SearchResultsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		7B0C2AB228BD3BBB00BC95A8 /* SearchResultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRepository.swift; sourceTree = "<group>"; };
+		7B0C2AB528BD3CBB00BC95A8 /* SearchResultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRepositoryTests.swift; sourceTree = "<group>"; };
+		7B0C2AB728BD3D0100BC95A8 /* SearchResultsDataTransferServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsDataTransferServiceMock.swift; sourceTree = "<group>"; };
 		7B3AD93028B7EB0D00B69081 /* RESTfulRockTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTfulRockTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 		7B0C2A7428BD25B900BC95A8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7B0C2AB428BD3CAE00BC95A8 /* Repositories */,
 				7B0C2A7628BD261700BC95A8 /* Network */,
 			);
 			path = Data;
@@ -141,6 +150,7 @@
 				7B0C2A8F28BD2B8100BC95A8 /* NetworkRequestPerformerMock.swift */,
 				7B0C2AA428BD309600BC95A8 /* DomainEntityMock.swift */,
 				7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */,
+				7B0C2AB728BD3D0100BC95A8 /* SearchResultsDataTransferServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -177,6 +187,30 @@
 				7B0C2AAC28BD36B700BC95A8 /* SearchResultsResponseDTO.swift */,
 			);
 			path = Mapping;
+			sourceTree = "<group>";
+		};
+		7B0C2AAE28BD3B5700BC95A8 /* RepositoryProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2AAF28BD3B7000BC95A8 /* SearchResultsRepositoryProtocol.swift */,
+			);
+			path = RepositoryProtocols;
+			sourceTree = "<group>";
+		};
+		7B0C2AB128BD3BAE00BC95A8 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2AB228BD3BBB00BC95A8 /* SearchResultsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7B0C2AB428BD3CAE00BC95A8 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2AB528BD3CBB00BC95A8 /* SearchResultsRepositoryTests.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		7B3AD92728B7EB0D00B69081 = {
@@ -232,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0C2AA828BD365B00BC95A8 /* Entities */,
+				7B0C2AAE28BD3B5700BC95A8 /* RepositoryProtocols */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -239,6 +274,7 @@
 		7B3AD94D28B82DD600B69081 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7B0C2AB128BD3BAE00BC95A8 /* Repositories */,
 				7B3AD95028B82E8700B69081 /* PersistentStorages */,
 				7B0C2A7528BD260700BC95A8 /* Network */,
 			);
@@ -383,6 +419,8 @@
 				7B0C2A8E28BD2B3900BC95A8 /* NetworkServiceMock.swift in Sources */,
 				7B0C2A8B28BD2B0000BC95A8 /* NetworkRequestPerformerTests.swift in Sources */,
 				7B0C2AA728BD310400BC95A8 /* ResponseDTOMock+Mapping.swift in Sources */,
+				7B0C2AB628BD3CBB00BC95A8 /* SearchResultsRepositoryTests.swift in Sources */,
+				7B0C2AB828BD3D0100BC95A8 /* SearchResultsDataTransferServiceMock.swift in Sources */,
 				7B0C2AA128BD2FED00BC95A8 /* DataTransferServiceTests.swift in Sources */,
 				7B0C2A8728BD292600BC95A8 /* NetworkServiceTests.swift in Sources */,
 				7B0C2A9A28BD2EE800BC95A8 /* ResponseDecoderTests.swift in Sources */,
@@ -395,9 +433,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0C2AB028BD3B7000BC95A8 /* SearchResultsRepositoryProtocol.swift in Sources */,
 				7B0C2A7828BD265700BC95A8 /* NetworkService.swift in Sources */,
 				7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */,
 				7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */,
+				7B0C2AB328BD3BBB00BC95A8 /* SearchResultsRepository.swift in Sources */,
 				7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */,
 				7B0C2AA328BD300000BC95A8 /* DataTransferService.swift in Sources */,
 				7B0C2AAA28BD366500BC95A8 /* SearchResult.swift in Sources */,
