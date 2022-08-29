@@ -20,6 +20,8 @@
 		7B0C2AA328BD300000BC95A8 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA228BD300000BC95A8 /* DataTransferService.swift */; };
 		7B0C2AA528BD309600BC95A8 /* DomainEntityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA428BD309600BC95A8 /* DomainEntityMock.swift */; };
 		7B0C2AA728BD310400BC95A8 /* ResponseDTOMock+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */; };
+		7B0C2AAA28BD366500BC95A8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AA928BD366500BC95A8 /* Result.swift */; };
+		7B0C2AAD28BD36B700BC95A8 /* ResultsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AAC28BD36B700BC95A8 /* ResultsResponseDTO.swift */; };
 		7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */; };
 		7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */; };
 		7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */; };
@@ -54,6 +56,8 @@
 		7B0C2AA228BD300000BC95A8 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		7B0C2AA428BD309600BC95A8 /* DomainEntityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainEntityMock.swift; sourceTree = "<group>"; };
 		7B0C2AA628BD310400BC95A8 /* ResponseDTOMock+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDTOMock+Mapping.swift"; sourceTree = "<group>"; };
+		7B0C2AA928BD366500BC95A8 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7B0C2AAC28BD36B700BC95A8 /* ResultsResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponseDTO.swift; sourceTree = "<group>"; };
 		7B3AD93028B7EB0D00B69081 /* RESTfulRockTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTfulRockTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		7B0C2A7528BD260700BC95A8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7B0C2AAB28BD368F00BC95A8 /* Mapping */,
 				7B0C2A9B28BD2F5E00BC95A8 /* DataTransferService */,
 				7B0C2A7728BD265700BC95A8 /* NetworkService.swift */,
 				7B0C2A8828BD2A0800BC95A8 /* NetworkRequestPerformer.swift */,
@@ -158,6 +163,22 @@
 			path = DataTransferService;
 			sourceTree = "<group>";
 		};
+		7B0C2AA828BD365B00BC95A8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2AA928BD366500BC95A8 /* Result.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7B0C2AAB28BD368F00BC95A8 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2AAC28BD36B700BC95A8 /* ResultsResponseDTO.swift */,
+			);
+			path = Mapping;
+			sourceTree = "<group>";
+		};
 		7B3AD92728B7EB0D00B69081 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +231,7 @@
 		7B3AD94C28B82DC900B69081 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				7B0C2AA828BD365B00BC95A8 /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -378,8 +400,10 @@
 				7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */,
 				7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */,
 				7B0C2AA328BD300000BC95A8 /* DataTransferService.swift in Sources */,
+				7B0C2AAA28BD366500BC95A8 /* Result.swift in Sources */,
 				7B0C2A9F28BD2F6F00BC95A8 /* ResponseDecoder.swift in Sources */,
 				7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */,
+				7B0C2AAD28BD36B700BC95A8 /* ResultsResponseDTO.swift in Sources */,
 				7B0C2A8928BD2A0800BC95A8 /* NetworkRequestPerformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
