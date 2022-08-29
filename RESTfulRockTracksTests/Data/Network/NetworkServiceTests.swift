@@ -29,7 +29,7 @@ class NetworkServiceTests: XCTestCase {
     private var expectedError: NetworkErrorMock?
     
     private var returnedResult: ReturnedResult?
-    private var returnedValue: [Genre]?
+    private var returnedValue: [DomainEntityMock]?
     private var returnedData: Data?
     private var returnedError: Error?
     
@@ -309,28 +309,5 @@ class NetworkServiceTests: XCTestCase {
                                        statusCode: 500,
                                        httpVersion: "1.1",
                                        headerFields: [:])
-    }
-}
-
-extension Data {
-    public static func mockSuccessResponse() -> Self {
-        """
-        {
-          "genres": [
-            {
-              "id": 28,
-              "name": "Action"
-            }
-          ]
-        }
-        """.data(using: .utf8)!
-    }
-}
-
-private struct Genre {
-    struct Genre: Equatable, Identifiable {
-
-        let id: String
-        let name: String?
     }
 }
