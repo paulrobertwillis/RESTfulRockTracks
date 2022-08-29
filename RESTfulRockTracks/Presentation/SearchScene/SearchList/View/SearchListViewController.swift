@@ -7,13 +7,19 @@
 
 import UIKit
 
-class SearchListViewController: UIViewController {
+class SearchListViewController: UIViewController, StoryboardInstantiable {
     
     // MARK: - Private Properties
     
-    private let viewModel: SearchListViewModel = SearchListViewModel()
+    private var viewModel: SearchListViewModel!
     
     // MARK: - Lifecycle
+    
+    static func create(with viewModel: SearchListViewModel) -> SearchListViewController {
+        let view = SearchListViewController.instantiateViewController()
+        view.viewModel = viewModel
+        return view
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
