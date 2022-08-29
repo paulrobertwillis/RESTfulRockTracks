@@ -29,10 +29,11 @@
 		7B0C2ABB28BD414400BC95A8 /* getSearchResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ABA28BD414400BC95A8 /* getSearchResultsUseCase.swift */; };
 		7B0C2ABE28BD416C00BC95A8 /* GetSearchResultsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ABD28BD416C00BC95A8 /* GetSearchResultsUseCaseTests.swift */; };
 		7B0C2AC028BD423E00BC95A8 /* SearchResultsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ABF28BD423E00BC95A8 /* SearchResultsRepositoryMock.swift */; };
+		7B0C2AC228BD4DA600BC95A8 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AC128BD4DA600BC95A8 /* SearchViewModel.swift */; };
 		7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */; };
 		7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */; };
-		7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */; };
-		7B3AD93B28B7EB0D00B69081 /* MusicSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93928B7EB0D00B69081 /* MusicSearch.storyboard */; };
+		7B3AD93828B7EB0D00B69081 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* SearchListViewController.swift */; };
+		7B3AD93B28B7EB0D00B69081 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93928B7EB0D00B69081 /* SearchList.storyboard */; };
 		7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93C28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld */; };
 		7B3AD94028B7EB0E00B69081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93F28B7EB0E00B69081 /* Assets.xcassets */; };
 		7B3AD94328B7EB0E00B69081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD94128B7EB0E00B69081 /* LaunchScreen.storyboard */; };
@@ -72,11 +73,12 @@
 		7B0C2ABA28BD414400BC95A8 /* getSearchResultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getSearchResultsUseCase.swift; sourceTree = "<group>"; };
 		7B0C2ABD28BD416C00BC95A8 /* GetSearchResultsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchResultsUseCaseTests.swift; sourceTree = "<group>"; };
 		7B0C2ABF28BD423E00BC95A8 /* SearchResultsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRepositoryMock.swift; sourceTree = "<group>"; };
+		7B0C2AC128BD4DA600BC95A8 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		7B3AD93028B7EB0D00B69081 /* RESTfulRockTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTfulRockTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewController.swift; sourceTree = "<group>"; };
-		7B3AD93A28B7EB0D00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MusicSearch.storyboard; sourceTree = "<group>"; };
+		7B3AD93728B7EB0D00B69081 /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
+		7B3AD93A28B7EB0D00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchList.storyboard; sourceTree = "<group>"; };
 		7B3AD93D28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RESTfulRockTracks.xcdatamodel; sourceTree = "<group>"; };
 		7B3AD93F28B7EB0E00B69081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B3AD94228B7EB0E00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -237,6 +239,32 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		7B0C2AC328BD4E4D00BC95A8 /* SearchList */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2AC528BD4E6600BC95A8 /* View */,
+				7B0C2AC428BD4E5E00BC95A8 /* ViewModel */,
+			);
+			path = SearchList;
+			sourceTree = "<group>";
+		};
+		7B0C2AC428BD4E5E00BC95A8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2AC128BD4DA600BC95A8 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7B0C2AC528BD4E6600BC95A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B3AD93928B7EB0D00B69081 /* SearchList.storyboard */,
+				7B3AD93728B7EB0D00B69081 /* SearchListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7B3AD92728B7EB0D00B69081 = {
 			isa = PBXGroup;
 			children = (
@@ -309,18 +337,17 @@
 		7B3AD94E28B82DE600B69081 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				7B3AD94F28B82DEE00B69081 /* MusicSearchFlow */,
+				7B3AD94F28B82DEE00B69081 /* SearchScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		7B3AD94F28B82DEE00B69081 /* MusicSearchFlow */ = {
+		7B3AD94F28B82DEE00B69081 /* SearchScene */ = {
 			isa = PBXGroup;
 			children = (
-				7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */,
-				7B3AD93928B7EB0D00B69081 /* MusicSearch.storyboard */,
+				7B0C2AC328BD4E4D00BC95A8 /* SearchList */,
 			);
-			path = MusicSearchFlow;
+			path = SearchScene;
 			sourceTree = "<group>";
 		};
 		7B3AD95028B82E8700B69081 /* PersistentStorages */ = {
@@ -429,7 +456,7 @@
 			files = (
 				7B3AD94328B7EB0E00B69081 /* LaunchScreen.storyboard in Resources */,
 				7B3AD94028B7EB0E00B69081 /* Assets.xcassets in Resources */,
-				7B3AD93B28B7EB0D00B69081 /* MusicSearch.storyboard in Resources */,
+				7B3AD93B28B7EB0D00B69081 /* SearchList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,12 +489,13 @@
 			files = (
 				7B0C2AB028BD3B7000BC95A8 /* SearchResultsRepositoryProtocol.swift in Sources */,
 				7B0C2A7828BD265700BC95A8 /* NetworkService.swift in Sources */,
-				7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */,
+				7B3AD93828B7EB0D00B69081 /* SearchListViewController.swift in Sources */,
 				7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */,
 				7B0C2AB328BD3BBB00BC95A8 /* SearchResultsRepository.swift in Sources */,
 				7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */,
 				7B0C2AA328BD300000BC95A8 /* DataTransferService.swift in Sources */,
 				7B0C2AAA28BD366500BC95A8 /* SearchResult.swift in Sources */,
+				7B0C2AC228BD4DA600BC95A8 /* SearchViewModel.swift in Sources */,
 				7B0C2A9F28BD2F6F00BC95A8 /* ResponseDecoder.swift in Sources */,
 				7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */,
 				7B0C2AAD28BD36B700BC95A8 /* SearchResultsResponseDTO.swift in Sources */,
@@ -487,12 +515,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7B3AD93928B7EB0D00B69081 /* MusicSearch.storyboard */ = {
+		7B3AD93928B7EB0D00B69081 /* SearchList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B3AD93A28B7EB0D00B69081 /* Base */,
 			);
-			name = MusicSearch.storyboard;
+			name = SearchList.storyboard;
 			sourceTree = "<group>";
 		};
 		7B3AD94128B7EB0E00B69081 /* LaunchScreen.storyboard */ = {
@@ -668,7 +696,7 @@
 				INFOPLIST_FILE = RESTfulRockTracks/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MusicSearch;
+				INFOPLIST_KEY_UIMainStoryboardFile = SearchList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -696,7 +724,7 @@
 				INFOPLIST_FILE = RESTfulRockTracks/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = MusicSearch;
+				INFOPLIST_KEY_UIMainStoryboardFile = SearchList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
