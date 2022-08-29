@@ -11,7 +11,7 @@ class SearchListViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private let viewModel: SearchViewModel = SearchViewModel()
+    private let viewModel: SearchListViewModel = SearchListViewModel()
     
     // MARK: - Lifecycle
     
