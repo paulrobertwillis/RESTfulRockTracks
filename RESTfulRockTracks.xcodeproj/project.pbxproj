@@ -14,6 +14,8 @@
 		7B0C2A8B28BD2B0000BC95A8 /* NetworkRequestPerformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A8A28BD2B0000BC95A8 /* NetworkRequestPerformerTests.swift */; };
 		7B0C2A8E28BD2B3900BC95A8 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A8D28BD2B3900BC95A8 /* NetworkServiceMock.swift */; };
 		7B0C2A9028BD2B8100BC95A8 /* NetworkRequestPerformerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A8F28BD2B8100BC95A8 /* NetworkRequestPerformerMock.swift */; };
+		7B0C2A9A28BD2EE800BC95A8 /* ResponseDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A9928BD2EE800BC95A8 /* ResponseDecoderTests.swift */; };
+		7B0C2A9F28BD2F6F00BC95A8 /* ResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A9E28BD2F6F00BC95A8 /* ResponseDecoder.swift */; };
 		7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */; };
 		7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */; };
 		7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* MusicSearchViewController.swift */; };
@@ -42,6 +44,8 @@
 		7B0C2A8A28BD2B0000BC95A8 /* NetworkRequestPerformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestPerformerTests.swift; sourceTree = "<group>"; };
 		7B0C2A8D28BD2B3900BC95A8 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		7B0C2A8F28BD2B8100BC95A8 /* NetworkRequestPerformerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestPerformerMock.swift; sourceTree = "<group>"; };
+		7B0C2A9928BD2EE800BC95A8 /* ResponseDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecoderTests.swift; sourceTree = "<group>"; };
+		7B0C2A9E28BD2F6F00BC95A8 /* ResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecoder.swift; sourceTree = "<group>"; };
 		7B3AD93028B7EB0D00B69081 /* RESTfulRockTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTfulRockTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		7B0C2A7528BD260700BC95A8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7B0C2A9B28BD2F5E00BC95A8 /* DataTransferService */,
 				7B0C2A7728BD265700BC95A8 /* NetworkService.swift */,
 				7B0C2A8828BD2A0800BC95A8 /* NetworkRequestPerformer.swift */,
 			);
@@ -98,6 +103,7 @@
 		7B0C2A7628BD261700BC95A8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7B0C2A9628BD2ECA00BC95A8 /* DataTransferService */,
 				7B0C2A8628BD292600BC95A8 /* NetworkServiceTests.swift */,
 				7B0C2A8A28BD2B0000BC95A8 /* NetworkRequestPerformerTests.swift */,
 			);
@@ -122,6 +128,22 @@
 				7B0C2A8F28BD2B8100BC95A8 /* NetworkRequestPerformerMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7B0C2A9628BD2ECA00BC95A8 /* DataTransferService */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2A9928BD2EE800BC95A8 /* ResponseDecoderTests.swift */,
+			);
+			path = DataTransferService;
+			sourceTree = "<group>";
+		};
+		7B0C2A9B28BD2F5E00BC95A8 /* DataTransferService */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2A9E28BD2F6F00BC95A8 /* ResponseDecoder.swift */,
+			);
+			path = DataTransferService;
 			sourceTree = "<group>";
 		};
 		7B3AD92728B7EB0D00B69081 = {
@@ -326,6 +348,7 @@
 				7B0C2A8E28BD2B3900BC95A8 /* NetworkServiceMock.swift in Sources */,
 				7B0C2A8B28BD2B0000BC95A8 /* NetworkRequestPerformerTests.swift in Sources */,
 				7B0C2A8728BD292600BC95A8 /* NetworkServiceTests.swift in Sources */,
+				7B0C2A9A28BD2EE800BC95A8 /* ResponseDecoderTests.swift in Sources */,
 				7B0C2A8028BD290600BC95A8 /* RESTfulRockTracksTests.swift in Sources */,
 				7B0C2A9028BD2B8100BC95A8 /* NetworkRequestPerformerMock.swift in Sources */,
 			);
@@ -339,6 +362,7 @@
 				7B3AD93828B7EB0D00B69081 /* MusicSearchViewController.swift in Sources */,
 				7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */,
 				7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */,
+				7B0C2A9F28BD2F6F00BC95A8 /* ResponseDecoder.swift in Sources */,
 				7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */,
 				7B0C2A8928BD2A0800BC95A8 /* NetworkRequestPerformer.swift in Sources */,
 			);
