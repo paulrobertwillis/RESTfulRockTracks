@@ -7,6 +7,16 @@
 
 import Foundation
 
-class SearchListViewModel {
+public protocol SearchListViewModelOutput {
+    var screenTitle: String { get }
+}
+
+class SearchListViewModel: SearchListViewModelOutput {
+        
+    // MARK: - Public Properties
+    
+    let screenTitle = NSLocalizedString("Rock Tracks", comment: "")
+    
+    
     
 }

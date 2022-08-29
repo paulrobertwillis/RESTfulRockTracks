@@ -1,5 +1,5 @@
 //
-//  GetSearchResultsUseCase.swift
+//  SearchResultsUseCase.swift
 //  RESTfulRockTracks
 //
 //  Created by Paul Willis on 29/08/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GetSearchResultsUseCaseProtocol {
+protocol SearchResultsUseCaseProtocol {
     typealias ResultValue = (Result<[SearchResult], Error>)
     typealias CompletionHandler = (ResultValue) -> Void
 
@@ -15,7 +15,7 @@ protocol GetSearchResultsUseCaseProtocol {
     func execute(completion: @escaping CompletionHandler) -> URLSessionTask?
 }
 
-class GetSearchResultsUseCase {
+class SearchResultsUseCase {
     
     // MARK: - Private Properties
     
@@ -28,9 +28,9 @@ class GetSearchResultsUseCase {
     }
 }
 
-// MARK: - GetSearchResultsUseCaseProtocol
+// MARK: - SearchResultsUseCaseProtocol
 
-extension GetSearchResultsUseCase: GetSearchResultsUseCaseProtocol {
+extension SearchResultsUseCase: SearchResultsUseCaseProtocol {
     @discardableResult
     func execute(completion: @escaping CompletionHandler) -> URLSessionTask? {
         let request = URLRequest(url: URL(string: "https://itunes.apple.com/search?term=rock")!)

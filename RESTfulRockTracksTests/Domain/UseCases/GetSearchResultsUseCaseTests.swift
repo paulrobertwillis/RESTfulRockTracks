@@ -15,7 +15,7 @@ class getSearchResultsUseCaseTests: XCTestCase {
     }
     
     private var repository: SearchResultsRepositoryMock?
-    private var sut: GetSearchResultsUseCase?
+    private var sut: SearchResultsUseCase?
     private var resultValue: SearchResultsRepositoryProtocol.ResultValue?
     private var task: URLSessionTask?
     
@@ -28,7 +28,7 @@ class getSearchResultsUseCaseTests: XCTestCase {
     override func setUp() {
         self.repository = SearchResultsRepositoryMock()
         self.repository?.getSearchResultsReturnValue = URLSessionTask()
-        self.sut = GetSearchResultsUseCase(repository: self.repository!)
+        self.sut = SearchResultsUseCase(repository: self.repository!)
     }
     
     override func tearDown() {
