@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ResultsResponseDTO: Decodable, Equatable {
+struct SearchResultsResponseDTO: Decodable, Equatable {
     let results: [ResultDTO]
 }
 
-extension ResultsResponseDTO {
+extension SearchResultsResponseDTO {
     struct ResultDTO: Decodable, Equatable {
         let wrapperType: String
         let artistName: String
@@ -21,7 +21,7 @@ extension ResultsResponseDTO {
     }
 }
 
-extension ResultsResponseDTO.ResultDTO {
+extension SearchResultsResponseDTO.ResultDTO {
     func toDomain() -> SearchResult {
         return SearchResult(
             wrapperType: WrapperType(rawValue: self.wrapperType),
