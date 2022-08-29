@@ -22,8 +22,8 @@ extension ResultsResponseDTO {
 }
 
 extension ResultsResponseDTO.ResultDTO {
-    func toDomain() -> Result {
-        return Result(
+    func toDomain() -> SearchResult {
+        return SearchResult(
             wrapperType: WrapperType(rawValue: self.wrapperType),
             artistName: self.artistName,
             trackName: self.trackName,
