@@ -39,7 +39,7 @@ class SearchSceneDependencyInjectionContainer {
     }
     
     func makeSearchListViewModel() -> SearchListViewModel {
-        SearchListViewModel()
+        SearchListViewModel(useCase: self.makeSearchResultsUseCase())
     }
     
     // MARK: - Flow Coordinators

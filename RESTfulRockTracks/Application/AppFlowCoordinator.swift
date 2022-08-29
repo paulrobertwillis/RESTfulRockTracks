@@ -28,7 +28,7 @@ class AppFlowCoordinator {
     
     func start() {
         let searchSceneDependencyInjectionContainer = self.appDependencyInjectionContainer.makeSearchSceneDependencyInjectionContainer()
-        let flow = searchSceneDependencyInjectionContainer.makeSearchListFlowCoordinator(navigationController: navigationController)
+        let flow = searchSceneDependencyInjectionContainer.makeSearchListFlowCoordinator(navigationController: self.navigationController)
         flow.start()
     }
 }
