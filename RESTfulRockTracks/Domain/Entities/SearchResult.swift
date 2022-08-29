@@ -1,5 +1,5 @@
 //
-//  Track.swift
+//  SearchResult.swift
 //  RESTfulRockTracks
 //
 //  Created by Paul Willis on 29/08/2022.
