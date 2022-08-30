@@ -5,7 +5,7 @@ Miro board created with initial plan of first screen. It demonstrates the focus 
 
 https://miro.com/app/board/uXjVPb2W7NA=/?share_link_id=798538195872
 
-Technologies and practices used:
+## Technologies and practices used
 - Git version control
 - Jira-like ticketing in Git
 - MVVM
