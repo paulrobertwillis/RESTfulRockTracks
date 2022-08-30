@@ -60,3 +60,4 @@ Some ideas for future improvements to the app include:
 - Expand tests to include View Models and other areas of the app that had TDD abandoned as a result of time constraints.
 - Similarly: improve tests to account for multithreading.
 - Improve UI and UX to make the app more appealing to use.
+- Implement caching using CoreData, accessed through the Repository Layer.
