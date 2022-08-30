@@ -45,7 +45,7 @@ class SearchListTableViewModel {
         self.actions = actions
     }
     
-    // MARK: - Helpers
+    // MARK: - API
     
     public func load() {
         self.searchResultsLoadTask = self.searchResultsUseCase.execute { result in
@@ -59,5 +59,9 @@ class SearchListTableViewModel {
             
             self.delegate?.didSetSearchResults()
         }
+    }
+    
+    public func didSelectItem(at index: Int) {
+        self.actions?.showSearchResultDetails(searchResults[index])
     }
 }

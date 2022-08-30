@@ -74,6 +74,6 @@ extension SearchListTableViewController {
 //    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected row at \(indexPath)")
+        self.viewModel.didSelectItem(at: indexPath.row)
     }
 }

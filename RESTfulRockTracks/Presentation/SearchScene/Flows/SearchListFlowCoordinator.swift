@@ -29,9 +29,7 @@ class SearchListFlowCoordinator {
     }
     
     func start() {
-        
-        let actions = SearchListTableViewModelActions(showSearchResultDetails: self.showSearchResultDetails(searchResult:))
-        
+        let actions = SearchListTableViewModelActions(showSearchResultDetails: self.showSearchResultDetails)
         let viewController = self.dependencies.makeSearchListTableViewController(actions: actions)
         
         self.navigationController?.pushViewController(viewController, animated: false)

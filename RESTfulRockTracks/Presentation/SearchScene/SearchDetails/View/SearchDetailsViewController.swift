@@ -23,9 +23,5 @@ class SearchDetailsViewController: UIViewController, StoryboardInstantiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
-    
-    
 }
