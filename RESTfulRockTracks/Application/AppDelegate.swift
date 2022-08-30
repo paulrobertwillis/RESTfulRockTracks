@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
-        // TODO: Adapt from personal project
         let container = NSPersistentContainer(name: "RESTfulRockTracks")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -38,8 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-
-    // TODO: Adapt from personal project
     
     // MARK: - Core Data Saving support
 

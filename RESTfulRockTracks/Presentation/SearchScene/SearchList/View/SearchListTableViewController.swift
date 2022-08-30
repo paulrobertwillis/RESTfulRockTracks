@@ -43,7 +43,6 @@ extension SearchListTableViewController: SearchListTableViewModelDelegate {
     func didSetSearchResults() {
         print(self.viewModel.searchResults)
         self.tableView.reloadData()
-        // TODO: Finish
     }
 }
 
@@ -59,7 +58,7 @@ extension SearchListTableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
                                                                      for: indexPath) as? SearchListItemCell
         else {
-            // TODO: assertionFailure here? Check Example MVVM
+            assertionFailure("Cannot dequeue reusable cell \(SearchListItemCell.self) with reuseIdentifier: \(SearchListItemCell.reuseIdentifier)")
             return UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         }
         

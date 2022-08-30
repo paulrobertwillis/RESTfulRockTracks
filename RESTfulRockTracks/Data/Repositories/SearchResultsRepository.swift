@@ -22,7 +22,7 @@ class SearchResultsRepository: SearchResultsRepositoryProtocol {
         return self.dataTransferService.request(request, decoder: decoder) { (result: Result<SearchResultsResponseDTO, DataTransferError>) in
             
             switch result {
-                // TODO: Organise main.async to only be used once?
+                // TODO: Organise main.async to only be used once
             case .success(let responseDTO):
                 let searchResults = responseDTO.results.map { $0.toDomain() }
                 DispatchQueue.main.async {
