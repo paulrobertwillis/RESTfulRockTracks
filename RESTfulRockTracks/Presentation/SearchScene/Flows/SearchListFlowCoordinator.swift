@@ -8,7 +8,8 @@
 import UIKit
 
 protocol SearchListFlowCoordinatorDependencies {
-    func makeSearchListTableViewController() -> SearchListTableViewController
+    func makeSearchListTableViewController(actions: SearchListTableViewModelActions) -> SearchListTableViewController
+    func makeSearchDetailsViewController(searchResult: SearchResult) -> SearchDetailsViewController
 }
 
 class SearchListFlowCoordinator {
@@ -28,9 +29,17 @@ class SearchListFlowCoordinator {
     }
     
     func start() {
-        let viewController = self.dependencies.makeSearchListTableViewController()
+        
+        let actions = SearchListTableViewModelActions(showSearchResultDetails: self.showSearchResultDetails(searchResult:))
+        
+        let viewController = self.dependencies.makeSearchListTableViewController(actions: actions)
         
         self.navigationController?.pushViewController(viewController, animated: false)
         self.searchListTableViewController = viewController
+    }
+    
+    private func showSearchResultDetails(searchResult: SearchResult) {
+        let viewController = self.dependencies.makeSearchDetailsViewController(searchResult: searchResult)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -43,8 +43,8 @@ class SearchSceneDependencyInjectionContainer {
     
     // MARK: - SearchList
     
-    func makeSearchListTableViewController() -> SearchListTableViewController {
-        let viewModel = self.makeSearchListTableViewModel()
+    func makeSearchListTableViewController(actions: SearchListTableViewModelActions) -> SearchListTableViewController {
+        let viewModel = self.makeSearchListTableViewModel(actions: actions)
         let viewController = SearchListTableViewController.create(with: viewModel, imagesRepository: self.makeImagesRepository()
         )
         viewModel.delegate = viewController
@@ -52,8 +52,21 @@ class SearchSceneDependencyInjectionContainer {
         return viewController
     }
     
-    func makeSearchListTableViewModel() -> SearchListTableViewModel {
-        SearchListTableViewModel(useCase: self.makeSearchResultsUseCase())
+    func makeSearchListTableViewModel(actions: SearchListTableViewModelActions) -> SearchListTableViewModel {
+        SearchListTableViewModel(useCase: self.makeSearchResultsUseCase(), actions: actions)
+    }
+    
+    // MARK: - SearchDetails
+    
+    func makeSearchDetailsViewController(searchResult: SearchResult) -> SearchDetailsViewController {
+        let viewModel = self.makeSearchDetailsViewModel()
+        let viewController = SearchDetailsViewController.create(with: viewModel)
+        
+        return viewController
+    }
+    
+    func makeSearchDetailsViewModel() -> SearchDetailsViewModel {
+        SearchDetailsViewModel()
     }
     
     // MARK: - Flow Coordinators

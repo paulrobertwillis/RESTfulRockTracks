@@ -132,7 +132,9 @@ extension SearchResult {
             artistName: String.random(),
             trackName: String.random(),
             price: Double.random(in: 1...2),
-            artworkUrl: String.random()
+            artworkUrl: String.random(),
+            durationInMilliseconds: Int.random(in: 200000...300000),
+            releaseDate: ISO8601DateFormatter().date(from: "2008-11-25 12:00:00 +0000")
         )
     }
 }

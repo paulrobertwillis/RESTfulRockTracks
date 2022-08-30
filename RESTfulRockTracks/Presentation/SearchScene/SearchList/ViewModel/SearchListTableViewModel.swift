@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct SearchListTableViewModelActions {
+    let showSearchResultDetails: (SearchResult) -> Void
+}
+
 public protocol SearchListTableViewModelDelegate: AnyObject {
     func didSetSearchResults()
 }
@@ -16,6 +20,7 @@ class SearchListTableViewModel {
     // MARK: - Private Properties
     
     private let searchResultsUseCase: SearchResultsUseCaseProtocol
+    private let actions: SearchListTableViewModelActions?
     
     // TODO: Replace with Cancellable
     private var searchResultsLoadTask: URLSessionTask?
@@ -35,8 +40,9 @@ class SearchListTableViewModel {
     
     // MARK: - Init
     
-    init(useCase: SearchResultsUseCaseProtocol) {
+    init(useCase: SearchResultsUseCaseProtocol, actions: SearchListTableViewModelActions) {
         self.searchResultsUseCase = useCase
+        self.actions = actions
     }
     
     // MARK: - Helpers

@@ -242,7 +242,9 @@ extension SearchResultsResponseDTO.SearchResultDTO {
             artistName: String.random(),
             trackName: String.random(),
             trackPrice: Double.random(in: 1...2),
-            artworkUrl100: String.random()
+            artworkUrl100: String.random(),
+            trackTimeMillis: Int.random(in: 200000...300000),
+            releaseDate: "2008-11-25 12:00:00 +0000"
         )
     }
     
