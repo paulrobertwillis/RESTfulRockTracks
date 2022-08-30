@@ -134,7 +134,8 @@ extension SearchResult {
             price: Double.random(in: 1...2),
             artworkUrl: String.random(),
             durationInMilliseconds: Int.random(in: 200000...300000),
-            releaseDate: ISO8601DateFormatter().date(from: "2008-11-25 12:00:00 +0000")
+            releaseDate: ISO8601DateFormatter().date(from: "1981-06-03T07:00:00Z")!,
+            trackViewUrl: URL(string: "www.example.com")
         )
     }
 }

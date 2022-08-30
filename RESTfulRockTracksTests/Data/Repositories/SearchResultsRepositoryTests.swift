@@ -244,7 +244,8 @@ extension SearchResultsResponseDTO.SearchResultDTO {
             trackPrice: Double.random(in: 1...2),
             artworkUrl100: String.random(),
             trackTimeMillis: Int.random(in: 200000...300000),
-            releaseDate: "2008-11-25 12:00:00 +0000"
+            releaseDate: "1981-06-03T07:00:00Z",
+            trackViewUrl: "www.example.com"
         )
     }
     
