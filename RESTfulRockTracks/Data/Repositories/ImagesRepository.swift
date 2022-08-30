@@ -18,7 +18,9 @@ class ImagesRepository {
 extension ImagesRepository: ImagesRepositoryProtocol {
     @discardableResult
     func getImage(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask? {
-        return self.dataTransferService.request(request) { (result: Result<Data, DataTransferError>) in
+        let decoder = RawDataResponseDecoder()
+        
+        return self.dataTransferService.request(request, decoder: decoder) { (result: Result<Data, DataTransferError>) in
             
             let result = result.mapError { $0 as Error }
             DispatchQueue.main.async { completion(result) }

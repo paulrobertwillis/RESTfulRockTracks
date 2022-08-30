@@ -7,12 +7,12 @@
 
 import Foundation
 
-public protocol ResponseDecoder {
+public protocol ResponseDecoderProtocol {
     func decode<T: Decodable>(_ data: Data) throws -> T
 }
 
 // MARK: - JSONResponseDecoder
-class JSONResponseDecoder: ResponseDecoder {
+class JSONResponseDecoder: ResponseDecoderProtocol {
     private let jsonDecoder = JSONDecoder()
     
     public func decode<T: Decodable>(_ data: Data) throws -> T {
@@ -21,7 +21,7 @@ class JSONResponseDecoder: ResponseDecoder {
 }
 
 // MARK: - RawDataResponseDecoder
-class RawDataResponseDecoder: ResponseDecoder {
+class RawDataResponseDecoder: ResponseDecoderProtocol {
     
     enum CodingKeys: String, CodingKey {
         case `default` = ""

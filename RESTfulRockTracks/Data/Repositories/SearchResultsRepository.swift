@@ -17,8 +17,9 @@ class SearchResultsRepository: SearchResultsRepositoryProtocol {
     
     @discardableResult
     func getSearchResults(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask? {
+        let decoder = JSONResponseDecoder()
         
-        self.dataTransferService.request(request) { (result: Result<SearchResultsResponseDTO, DataTransferError>) in
+        return self.dataTransferService.request(request, decoder: decoder) { (result: Result<SearchResultsResponseDTO, DataTransferError>) in
             
             switch result {
                 // TODO: Organise main.async to only be used once?

@@ -22,6 +22,7 @@ class DataTransferServiceTests: XCTestCase {
     }
 
     private var networkService: NetworkServiceMock?
+    private var decoder: ResponseDecoderProtocol!
     private var sut: Sut?
     
     private var expectedReturnedURLSessionTask: URLSessionTask?
@@ -55,11 +56,13 @@ class DataTransferServiceTests: XCTestCase {
         super.setUp()
         
         self.networkService = NetworkServiceMock()
+        self.decoder = JSONResponseDecoder()
         self.sut = DataTransferService(networkService: self.networkService!)
     }
     
     override func tearDown() {
         self.networkService = nil
+        self.decoder = nil
         self.sut = nil
         
         self.expectedReturnedURLSessionTask = nil
@@ -333,7 +336,7 @@ class DataTransferServiceTests: XCTestCase {
     }
     
     private func performRequest() {
-        self.returnedURLSessionTask = sut?.request(self.urlRequest()!, completion: self.completion(_:))
+        self.returnedURLSessionTask = sut?.request(self.urlRequest()!, decoder: self.decoder, completion: self.completion(_:))
     }
     
     private func createMockSuccessfulResponseFromNetworkService() {
