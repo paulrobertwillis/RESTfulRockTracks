@@ -11,7 +11,7 @@ enum WrapperType: String {
     case track
 }
 
-struct SearchResult: Equatable {
+public struct SearchResult: Equatable {
     let wrapperType: WrapperType?
     let artistName: String
     let trackName: String

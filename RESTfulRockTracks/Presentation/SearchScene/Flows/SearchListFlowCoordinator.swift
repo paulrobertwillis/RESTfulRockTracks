@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SearchListFlowCoordinatorDependencies {
-    func makeSearchListViewController() -> SearchListViewController
+    func makeSearchListTableViewController() -> SearchListTableViewController
 }
 
 class SearchListFlowCoordinator {
@@ -18,7 +18,7 @@ class SearchListFlowCoordinator {
     private weak var navigationController: UINavigationController?
     private let dependencies: SearchListFlowCoordinatorDependencies
     
-    private weak var searchListViewController: SearchListViewController?
+    private weak var searchListTableViewController: SearchListTableViewController?
 
     // MARK: - Init
     
@@ -28,9 +28,9 @@ class SearchListFlowCoordinator {
     }
     
     func start() {
-        let viewController = self.dependencies.makeSearchListViewController()
+        let viewController = self.dependencies.makeSearchListTableViewController()
         
         self.navigationController?.pushViewController(viewController, animated: false)
-        self.searchListViewController = viewController
+        self.searchListTableViewController = viewController
     }
 }

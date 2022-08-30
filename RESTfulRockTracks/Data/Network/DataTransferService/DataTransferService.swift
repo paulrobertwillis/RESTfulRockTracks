@@ -53,7 +53,6 @@ class DataTransferService<GenericDecodable: Decodable>: DataTransferServiceProto
     
     // MARK: - Helpers
     
-    // TODO: Consider how to migrate this decode function to the more appropriate ResponseDecoder object
     private func decode<T: Decodable>(_ data: Data?) throws -> Result<T, DataTransferError> {
         do {
             guard let data = data else { return .failure(.missingData) }
@@ -76,17 +75,13 @@ class DataTransferService<GenericDecodable: Decodable>: DataTransferServiceProto
         }
     }
     
-    // TODO: Consider how to refactor this function to do only one thing
     private func decodeAndHandleResult(from data: Data?, completion: CompletionHandler) throws {
         let result: ResultValue = try self.decode(data)
         completion(result)
     }
     
-    // TODO: Consider how to refactor this function to do only one thing
     private func resolveAndHandleError(_ error: Error, completion: CompletionHandler) {
         let resolvedError = self.resolve(error)
         completion(.failure(resolvedError))
     }
 }
-
-// TODO: Extract DataTransferErrorResolver

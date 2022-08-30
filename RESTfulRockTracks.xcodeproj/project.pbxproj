@@ -36,10 +36,12 @@
 		7B0C2AD228BD5C5B00BC95A8 /* SearchSceneDependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AD128BD5C5B00BC95A8 /* SearchSceneDependencyInjectionContainer.swift */; };
 		7B0C2AD528BD5DD800BC95A8 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AD428BD5DD800BC95A8 /* StoryboardInstantiable.swift */; };
 		7B0C2AD828BD60C200BC95A8 /* SearchListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AD728BD60C200BC95A8 /* SearchListFlowCoordinator.swift */; };
+		7B0C2ADD28BD7AF600BC95A8 /* SearchListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ADC28BD7AF600BC95A8 /* SearchListItemCell.swift */; };
+		7B0C2ADF28BD806500BC95A8 /* SearchListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ADE28BD806500BC95A8 /* SearchListItemViewModel.swift */; };
 		7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */; };
 		7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */; };
-		7B3AD93828B7EB0D00B69081 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* SearchListViewController.swift */; };
-		7B3AD93B28B7EB0D00B69081 /* SearchListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93928B7EB0D00B69081 /* SearchListViewController.storyboard */; };
+		7B3AD93828B7EB0D00B69081 /* SearchListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93728B7EB0D00B69081 /* SearchListTableViewController.swift */; };
+		7B3AD93B28B7EB0D00B69081 /* SearchListTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93928B7EB0D00B69081 /* SearchListTableViewController.storyboard */; };
 		7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AD93C28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld */; };
 		7B3AD94028B7EB0E00B69081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD93F28B7EB0E00B69081 /* Assets.xcassets */; };
 		7B3AD94328B7EB0E00B69081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AD94128B7EB0E00B69081 /* LaunchScreen.storyboard */; };
@@ -86,11 +88,13 @@
 		7B0C2AD128BD5C5B00BC95A8 /* SearchSceneDependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSceneDependencyInjectionContainer.swift; sourceTree = "<group>"; };
 		7B0C2AD428BD5DD800BC95A8 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		7B0C2AD728BD60C200BC95A8 /* SearchListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListFlowCoordinator.swift; sourceTree = "<group>"; };
+		7B0C2ADC28BD7AF600BC95A8 /* SearchListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListItemCell.swift; sourceTree = "<group>"; };
+		7B0C2ADE28BD806500BC95A8 /* SearchListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListItemViewModel.swift; sourceTree = "<group>"; };
 		7B3AD93028B7EB0D00B69081 /* RESTfulRockTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESTfulRockTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3AD93328B7EB0D00B69081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3AD93528B7EB0D00B69081 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B3AD93728B7EB0D00B69081 /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
-		7B3AD93A28B7EB0D00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchListViewController.storyboard; sourceTree = "<group>"; };
+		7B3AD93728B7EB0D00B69081 /* SearchListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewController.swift; sourceTree = "<group>"; };
+		7B3AD93A28B7EB0D00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchListTableViewController.storyboard; sourceTree = "<group>"; };
 		7B3AD93D28B7EB0D00B69081 /* RESTfulRockTracks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RESTfulRockTracks.xcdatamodel; sourceTree = "<group>"; };
 		7B3AD93F28B7EB0E00B69081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B3AD94228B7EB0E00B69081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			children = (
 				7B0C2AC528BD4E6600BC95A8 /* View */,
 				7B0C2AC428BD4E5E00BC95A8 /* ViewModel */,
+				7B0C2AD928BD7A8600BC95A8 /* Cells */,
 			);
 			path = SearchList;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0C2AC128BD4DA600BC95A8 /* SearchListViewModel.swift */,
+				7B0C2ADE28BD806500BC95A8 /* SearchListItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -272,8 +278,8 @@
 		7B0C2AC528BD4E6600BC95A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7B3AD93928B7EB0D00B69081 /* SearchListViewController.storyboard */,
-				7B3AD93728B7EB0D00B69081 /* SearchListViewController.swift */,
+				7B3AD93928B7EB0D00B69081 /* SearchListTableViewController.storyboard */,
+				7B3AD93728B7EB0D00B69081 /* SearchListTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +339,14 @@
 				7B0C2AD728BD60C200BC95A8 /* SearchListFlowCoordinator.swift */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		7B0C2AD928BD7A8600BC95A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7B0C2ADC28BD7AF600BC95A8 /* SearchListItemCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7B3AD92728B7EB0D00B69081 = {
@@ -530,7 +544,7 @@
 			files = (
 				7B3AD94328B7EB0E00B69081 /* LaunchScreen.storyboard in Resources */,
 				7B3AD94028B7EB0E00B69081 /* Assets.xcassets in Resources */,
-				7B3AD93B28B7EB0D00B69081 /* SearchListViewController.storyboard in Resources */,
+				7B3AD93B28B7EB0D00B69081 /* SearchListTableViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,10 +582,12 @@
 				7B0C2AD228BD5C5B00BC95A8 /* SearchSceneDependencyInjectionContainer.swift in Sources */,
 				7B0C2AD528BD5DD800BC95A8 /* StoryboardInstantiable.swift in Sources */,
 				7B0C2A7828BD265700BC95A8 /* NetworkService.swift in Sources */,
-				7B3AD93828B7EB0D00B69081 /* SearchListViewController.swift in Sources */,
+				7B3AD93828B7EB0D00B69081 /* SearchListTableViewController.swift in Sources */,
 				7B3AD93428B7EB0D00B69081 /* AppDelegate.swift in Sources */,
+				7B0C2ADD28BD7AF600BC95A8 /* SearchListItemCell.swift in Sources */,
 				7B0C2AD828BD60C200BC95A8 /* SearchListFlowCoordinator.swift in Sources */,
 				7B0C2AB328BD3BBB00BC95A8 /* SearchResultsRepository.swift in Sources */,
+				7B0C2ADF28BD806500BC95A8 /* SearchListItemViewModel.swift in Sources */,
 				7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */,
 				7B0C2AA328BD300000BC95A8 /* DataTransferService.swift in Sources */,
 				7B0C2AAA28BD366500BC95A8 /* SearchResult.swift in Sources */,
@@ -595,12 +611,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7B3AD93928B7EB0D00B69081 /* SearchListViewController.storyboard */ = {
+		7B3AD93928B7EB0D00B69081 /* SearchListTableViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B3AD93A28B7EB0D00B69081 /* Base */,
 			);
-			name = SearchListViewController.storyboard;
+			name = SearchListTableViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		7B3AD94128B7EB0E00B69081 /* LaunchScreen.storyboard */ = {

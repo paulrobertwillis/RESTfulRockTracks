@@ -16,7 +16,7 @@ extension SearchResultsResponseDTO {
         let wrapperType: String
         let artistName: String
         let trackName: String
-        let price: Double
+        let trackPrice: Double
         let artworkUrl100: String?
     }
 }
@@ -27,7 +27,7 @@ extension SearchResultsResponseDTO.SearchResultDTO {
             wrapperType: WrapperType(rawValue: self.wrapperType),
             artistName: self.artistName,
             trackName: self.trackName,
-            price: self.price,
+            price: self.trackPrice,
             artworkUrl: self.artworkUrl100
         )
     }
