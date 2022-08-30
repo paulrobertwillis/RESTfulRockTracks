@@ -21,22 +21,24 @@ class SearchDetailsViewController: UIViewController, StoryboardInstantiable {
     // MARK: - Private Properties
     
     private var viewModel: SearchDetailsViewModel!
+    private var artworkImagesRepository: ImagesRepositoryProtocol?
     
     // MARK: - Lifecycle
     
-    static func create(with viewModel: SearchDetailsViewModel) -> SearchDetailsViewController {
+    static func create(with viewModel: SearchDetailsViewModel, imagesRepository: ImagesRepositoryProtocol) -> SearchDetailsViewController {
         let view = SearchDetailsViewController.instantiateViewController()
         view.viewModel = viewModel
+        view.artworkImagesRepository = imagesRepository
         return view
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
-        
+        self.updateArtworkImage()
     }
     
-    // MARK: - Helpers
+    // MARK: - Setup
     
     private func setUpView() {
         self.trackNameLabel.text = self.viewModel.trackName
@@ -44,5 +46,27 @@ class SearchDetailsViewController: UIViewController, StoryboardInstantiable {
         self.priceLabel.text = self.viewModel.price
         self.durationLabel.text = self.viewModel.duration
         self.releaseDateLabel.text = self.viewModel.releaseDate
+    }
+    
+    private func updateArtworkImage() {
+        self.artworkImageView.image = nil
+        guard let artworkImagePath = self.viewModel.artworkImagePath,
+              let url = URL(string: artworkImagePath)
+        else {
+            return
+        }
+        
+        let urlRequest = URLRequest(url: url)
+                
+        self.artworkImagesRepository?.getImage(request: urlRequest) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let data):
+                self.artworkImageView.image = UIImage(data: data)
+            case .failure(_):
+                self.artworkImageView.image = UIImage(named: "PlaceholderArtworkImage")
+            }
+        }
     }
 }

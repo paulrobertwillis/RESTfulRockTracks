@@ -22,7 +22,6 @@ class SearchListTableViewModel {
     private let searchResultsUseCase: SearchResultsUseCaseProtocol
     private let actions: SearchListTableViewModelActions?
     
-    // TODO: Replace with Cancellable
     private var searchResultsLoadTask: URLSessionTask?
         
     // MARK: - Public Properties

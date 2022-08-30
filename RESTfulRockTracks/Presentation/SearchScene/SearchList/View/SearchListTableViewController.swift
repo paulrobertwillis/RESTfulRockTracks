@@ -33,9 +33,13 @@ class SearchListTableViewController: UITableViewController, StoryboardInstantiab
         self.viewModel.load()
     }
     
+    // MARK: - Setup
+    
     private func setupTableView() {
         let cellNib = UINib(nibName: SearchListItemCell.reuseIdentifier, bundle: nil)
         self.tableView.register(cellNib, forCellReuseIdentifier: SearchListItemCell.reuseIdentifier)
+        
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
 }
 
@@ -67,11 +71,7 @@ extension SearchListTableViewController {
         
         return cell
     }
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//    }
-    
+        
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.viewModel.didSelectItem(at: indexPath.row)
     }

@@ -60,7 +60,7 @@ class SearchSceneDependencyInjectionContainer {
     
     func makeSearchDetailsViewController(searchResult: SearchResult) -> SearchDetailsViewController {
         let viewModel = self.makeSearchDetailsViewModel(searchResult: searchResult)
-        let viewController = SearchDetailsViewController.create(with: viewModel)
+        let viewController = SearchDetailsViewController.create(with: viewModel, imagesRepository: self.makeImagesRepository())
         
         return viewController
     }

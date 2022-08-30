@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol SearchDetailsViewModelDelegate {
+    func didLoadArtworkImageData() -> Data
+}
+
 class SearchDetailsViewModel {
     
     // MARK: - Public Properties
@@ -16,6 +20,7 @@ class SearchDetailsViewModel {
     public let price: String
     public let duration: String
     public let releaseDate: String
+    public let artworkImagePath: String?
     
     // MARK: - Init
     
@@ -25,7 +30,11 @@ class SearchDetailsViewModel {
         self.price = "$\(searchResult.price)"
         self.duration = searchResult.durationInMilliseconds.millisecondsToMinutesAndSeconds
         self.releaseDate = dateFormatter.string(from: searchResult.releaseDate!)
+        self.artworkImagePath = searchResult.artworkUrl
     }
+    
+
+    
 }
 
 private let dateFormatter: ISO8601DateFormatter = {

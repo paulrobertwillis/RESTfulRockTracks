@@ -10,7 +10,7 @@ import UIKit
 class SearchListItemCell: UITableViewCell {
     
     static let reuseIdentifier = String(describing: SearchListItemCell.self)
-    
+
     // MARK: - Outlets
     
     @IBOutlet private weak var artworkImageView: UIImageView!
@@ -22,6 +22,13 @@ class SearchListItemCell: UITableViewCell {
     
     private var viewModel: SearchListItemViewModel!
     private var artworkImagesRepository: ImagesRepositoryProtocol?
+    
+    // MARK: - Setup
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4))
+    }
     
     // MARK: - API
     
@@ -39,7 +46,6 @@ class SearchListItemCell: UITableViewCell {
     
     private func updateArtworkImage() {
         self.artworkImageView.image = nil
-        // TODO: Insert default image for not loading
         guard let artworkImagePath = self.viewModel.artworkImagePath,
               let url = URL(string: artworkImagePath)
         else {
@@ -54,7 +60,7 @@ class SearchListItemCell: UITableViewCell {
             switch result {
             case .success(let data):
                 self.artworkImageView.image = UIImage(data: data)
-            case .failure(let error):
+            case .failure(_):
                 self.artworkImageView.image = UIImage(named: "PlaceholderArtworkImage")
             }
         }

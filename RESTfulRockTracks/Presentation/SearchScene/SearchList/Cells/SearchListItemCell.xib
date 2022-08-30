@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,22 +23,22 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0kX-Yg-xsW">
-                        <rect key="frame" x="124" y="8" width="282" height="86"/>
+                        <rect key="frame" x="124" y="19" width="262" height="64"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trM-Qu-2Rf">
-                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trM-Qu-2Rf">
+                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc9-5d-oxE">
-                                <rect key="frame" x="0.0" y="33" width="41" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc9-5d-oxE">
+                                <rect key="frame" x="0.0" y="32.5" width="41" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giy-Um-pow">
-                                <rect key="frame" x="0.0" y="65.5" width="39" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giy-Um-pow">
+                                <rect key="frame" x="0.0" y="64" width="39" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,9 +50,9 @@
                     <constraint firstItem="fX2-eT-Tjt" firstAttribute="leading" secondItem="v6t-hD-GBv" secondAttribute="leading" id="1mN-XM-2S2"/>
                     <constraint firstItem="fX2-eT-Tjt" firstAttribute="top" secondItem="v6t-hD-GBv" secondAttribute="top" id="2t4-xc-kZO"/>
                     <constraint firstAttribute="bottom" secondItem="fX2-eT-Tjt" secondAttribute="bottom" id="3P9-Ic-95u"/>
-                    <constraint firstAttribute="bottom" secondItem="0kX-Yg-xsW" secondAttribute="bottom" constant="8" id="AXh-uL-yfN"/>
-                    <constraint firstItem="0kX-Yg-xsW" firstAttribute="top" secondItem="v6t-hD-GBv" secondAttribute="top" constant="8" id="m7U-Rl-gBW"/>
-                    <constraint firstAttribute="trailing" secondItem="0kX-Yg-xsW" secondAttribute="trailing" constant="8" id="nKk-1R-mhC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0kX-Yg-xsW" secondAttribute="bottom" constant="8" id="AXh-uL-yfN"/>
+                    <constraint firstItem="0kX-Yg-xsW" firstAttribute="top" secondItem="v6t-hD-GBv" secondAttribute="topMargin" constant="8" id="m7U-Rl-gBW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0kX-Yg-xsW" secondAttribute="trailing" constant="8" id="nKk-1R-mhC"/>
                     <constraint firstItem="0kX-Yg-xsW" firstAttribute="leading" secondItem="fX2-eT-Tjt" secondAttribute="trailing" constant="24" id="yeJ-nA-Zxl"/>
                 </constraints>
             </tableViewCellContentView>
