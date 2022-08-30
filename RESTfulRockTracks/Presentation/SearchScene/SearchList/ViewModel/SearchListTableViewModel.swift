@@ -11,13 +11,7 @@ public protocol SearchListTableViewModelDelegate: AnyObject {
     func didSetSearchResults()
 }
 
-public protocol SearchListTableViewModelOutput {
-    var screenTitle: String { get }
-    var error: String? { get }
-    var searchResults: [SearchResult] { get }
-}
-
-class SearchListTableViewModel: SearchListTableViewModelOutput {
+class SearchListTableViewModel {
     
     // MARK: - Private Properties
     

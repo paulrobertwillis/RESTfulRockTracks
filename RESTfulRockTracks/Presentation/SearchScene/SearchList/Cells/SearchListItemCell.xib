@@ -57,6 +57,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="artistNameLabel" destination="zc9-5d-oxE" id="Lnc-E2-xY9"/>
+                <outlet property="artworkImageView" destination="fX2-eT-Tjt" id="y7M-Vx-TNL"/>
                 <outlet property="priceLabel" destination="Giy-Um-pow" id="3fQ-4V-WWi"/>
                 <outlet property="trackNameLabel" destination="trM-Qu-2Rf" id="qQj-cY-4ga"/>
             </connections>

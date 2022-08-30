@@ -12,12 +12,17 @@ class SearchSceneDependencyInjectionContainer {
     
     // MARK: - Private Properties
     
-    private let dataTransferService: DataTransferService<SearchResultsResponseDTO>
+    private let searchResultsDataTransferService: DataTransferService<SearchResultsResponseDTO>
+    private let imageDataTransferService: DataTransferService<Data>
     
     // MARK: - Init
     
-    init(dataTransferService: DataTransferService<SearchResultsResponseDTO>) {
-        self.dataTransferService = dataTransferService
+    init(
+        searchResultsDataTransferService: DataTransferService<SearchResultsResponseDTO>,
+        imageDataTransferService: DataTransferService<Data>
+    ) {
+        self.searchResultsDataTransferService = searchResultsDataTransferService
+        self.imageDataTransferService = imageDataTransferService
     }
     
     // MARK: - Use Cases
@@ -29,14 +34,19 @@ class SearchSceneDependencyInjectionContainer {
     // MARK: - Repositories
     
     func makeSearchResultsRepository() -> SearchResultsRepository {
-        SearchResultsRepository(dataTransferService: self.dataTransferService)
+        SearchResultsRepository(dataTransferService: self.searchResultsDataTransferService)
+    }
+    
+    func makeImagesRepository() -> ImagesRepository {
+        ImagesRepository(dataTransferService: self.imageDataTransferService)
     }
     
     // MARK: - SearchList
     
     func makeSearchListTableViewController() -> SearchListTableViewController {
         let viewModel = self.makeSearchListTableViewModel()
-        let viewController = SearchListTableViewController.create(with: viewModel)
+        let viewController = SearchListTableViewController.create(with: viewModel, imagesRepository: self.makeImagesRepository()
+        )
         viewModel.delegate = viewController
         
         return viewController

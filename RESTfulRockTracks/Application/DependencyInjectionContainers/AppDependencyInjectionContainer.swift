@@ -18,9 +18,20 @@ class AppDependencyInjectionContainer {
         return DataTransferService<SearchResultsResponseDTO>(networkService: networkService)
     }()
     
+    lazy var imageDataTransferService: DataTransferService<Data> = {
+        let networkRequestPerformer = NetworkRequestPerformer()
+        let networkService = NetworkService(networkRequestPerformer: networkRequestPerformer)
+        
+        return DataTransferService<Data>(networkService: networkService)
+    }()
+
+    
     // MARK: - DependencyInjectionContainers of Scenes
     
     func makeSearchSceneDependencyInjectionContainer() -> SearchSceneDependencyInjectionContainer {
-        SearchSceneDependencyInjectionContainer(dataTransferService: self.searchResultsDataTransferService)
+        SearchSceneDependencyInjectionContainer(
+            searchResultsDataTransferService: self.searchResultsDataTransferService,
+            imageDataTransferService: self.imageDataTransferService
+        )
     }
 }

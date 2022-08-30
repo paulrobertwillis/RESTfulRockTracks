@@ -12,12 +12,16 @@ class SearchListTableViewController: UITableViewController, StoryboardInstantiab
     // MARK: - Private Properties
     
     private var viewModel: SearchListTableViewModel!
+    private var imagesRepository: ImagesRepositoryProtocol?
     
     // MARK: - Lifecycle
     
-    static func create(with viewModel: SearchListTableViewModel) -> SearchListTableViewController {
+    static func create(with viewModel: SearchListTableViewModel,
+                       imagesRepository: ImagesRepositoryProtocol?
+    ) -> SearchListTableViewController {
         let view = SearchListTableViewController.instantiateViewController()
         view.viewModel = viewModel
+        view.imagesRepository = imagesRepository
         return view
     }
     
@@ -61,8 +65,7 @@ extension SearchListTableViewController {
         
         let searchListItemViewModel = SearchListItemViewModel(searchResult: self.viewModel.searchResults[indexPath.row])
         
-        cell.fill(
-            with: searchListItemViewModel)
+        cell.fill( with: searchListItemViewModel, imagesRepository: self.imagesRepository)
         
         return cell
 
