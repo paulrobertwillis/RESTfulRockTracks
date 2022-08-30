@@ -94,6 +94,7 @@
                         <outlet property="artistNameLabel" destination="gHE-X5-VQ2" id="ELb-kP-SPj"/>
                         <outlet property="artworkImageView" destination="al4-Le-Sub" id="L2t-Xb-UvQ"/>
                         <outlet property="durationLabel" destination="0ml-Nn-hRL" id="WWo-jR-iOm"/>
+                        <outlet property="moreDetailsButton" destination="yYP-GT-VUt" id="Teu-1m-ADE"/>
                         <outlet property="priceLabel" destination="uxh-ue-caH" id="h0f-wn-lk4"/>
                         <outlet property="releaseDateLabel" destination="Skr-iX-JWt" id="6aB-9y-vip"/>
                         <outlet property="trackNameLabel" destination="93x-Iv-NAY" id="8qB-bF-IjX"/>

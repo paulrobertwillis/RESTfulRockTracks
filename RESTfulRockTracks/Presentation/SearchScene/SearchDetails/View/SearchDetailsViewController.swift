@@ -17,7 +17,8 @@ class SearchDetailsViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var durationLabel: UILabel!
     @IBOutlet private weak var releaseDateLabel: UILabel!
-
+    @IBOutlet private weak var moreDetailsButton: UIButton!
+    
     // MARK: - Private Properties
     
     private var viewModel: SearchDetailsViewModel!
@@ -35,6 +36,7 @@ class SearchDetailsViewController: UIViewController, StoryboardInstantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
+        self.setUpButton()
         self.updateArtworkImage()
     }
     
@@ -46,6 +48,10 @@ class SearchDetailsViewController: UIViewController, StoryboardInstantiable {
         self.priceLabel.text = self.viewModel.price
         self.durationLabel.text = self.viewModel.duration
         self.releaseDateLabel.text = self.viewModel.releaseDate
+    }
+    
+    private func setUpButton() {
+        self.moreDetailsButton.layer.cornerRadius = 10
     }
     
     private func updateArtworkImage() {
