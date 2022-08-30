@@ -38,9 +38,7 @@ class SearchListTableViewController: UITableViewController, StoryboardInstantiab
 extension SearchListTableViewController: SearchListTableViewModelDelegate {
     func didSetSearchResults() {
         print(self.viewModel.searchResults)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
         // TODO: Finish
     }
 }

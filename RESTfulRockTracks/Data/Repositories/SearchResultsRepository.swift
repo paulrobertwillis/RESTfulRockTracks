@@ -21,10 +21,16 @@ class SearchResultsRepository: SearchResultsRepositoryProtocol {
         self.dataTransferService.request(request) { (result: Result<SearchResultsResponseDTO, DataTransferError>) in
             
             switch result {
+                // TODO: Organise main.async to only be used once?
             case .success(let responseDTO):
-                completion(.success(responseDTO.results.map { $0.toDomain() }))
+                let searchResults = responseDTO.results.map { $0.toDomain() }
+                DispatchQueue.main.async {
+                    completion(.success(searchResults))
+                }
             case .failure(let error):
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
             }
         }
     }
