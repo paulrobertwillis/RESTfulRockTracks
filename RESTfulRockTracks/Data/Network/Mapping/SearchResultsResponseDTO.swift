@@ -33,7 +33,7 @@ extension SearchResultsResponseDTO.SearchResultDTO {
             price: self.trackPrice,
             artworkUrl: self.artworkUrl100,
             durationInMilliseconds: trackTimeMillis,
-            releaseDate: ISO8601DateFormatter().date(from: self.releaseDate),
+            releaseDate: ISO8601DateFormatter().date(from: self.releaseDate)!,
             trackViewUrl: URL(string: self.trackViewUrl)
         )
     }

@@ -38,7 +38,7 @@ class SearchDetailsViewModel {
         self.artistName = searchResult.artistName
         self.price = "$\(searchResult.price)"
         self.duration = searchResult.durationInMilliseconds.millisecondsToMinutesAndSeconds
-        self.releaseDate = dateFormatter.string(from: searchResult.releaseDate!)
+        self.releaseDate = dateFormatter.string(from: searchResult.releaseDate)
         self.artworkImagePath = searchResult.artworkUrl
         self.trackViewUrl = searchResult.trackViewUrl
         

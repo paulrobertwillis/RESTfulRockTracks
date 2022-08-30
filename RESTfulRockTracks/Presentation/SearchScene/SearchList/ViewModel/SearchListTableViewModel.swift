@@ -51,7 +51,8 @@ class SearchListTableViewModel {
         self.searchResultsLoadTask = self.searchResultsUseCase.execute { result in
             switch result {
             case .success(let searchResults):
-                self.searchResults = searchResults
+                print(searchResults)
+                self.searchResults = searchResults.sortedByAscendingReleaseDate()
             case .failure(let error):
                 // TODO: Use error
                 self.error = error.localizedDescription
@@ -63,5 +64,16 @@ class SearchListTableViewModel {
     
     public func didSelectItem(at index: Int) {
         self.actions?.showSearchResultDetails(searchResults[index])
+    }
+}
+
+private extension Array where Element == SearchResult {
+    func sortedByAscendingReleaseDate() -> [SearchResult] {
+        self.sorted {
+            switch ($0, $1) {
+            case let (a, b):
+                return a.releaseDate < b.releaseDate
+            }
+        }
     }
 }
