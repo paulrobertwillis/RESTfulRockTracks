@@ -17,4 +17,6 @@ public struct SearchResult: Equatable {
     let trackName: String
     let price: Double
     let artworkUrl: String?
+    let durationInMilliseconds: Int
+    let releaseDate: Date?
 }

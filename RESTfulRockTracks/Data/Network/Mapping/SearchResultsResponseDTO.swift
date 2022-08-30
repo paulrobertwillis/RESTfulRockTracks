@@ -18,6 +18,8 @@ extension SearchResultsResponseDTO {
         let trackName: String
         let trackPrice: Double
         let artworkUrl100: String?
+        let trackTimeMillis: Int
+        let releaseDate: String
     }
 }
 
@@ -28,7 +30,9 @@ extension SearchResultsResponseDTO.SearchResultDTO {
             artistName: self.artistName,
             trackName: self.trackName,
             price: self.trackPrice,
-            artworkUrl: self.artworkUrl100
+            artworkUrl: self.artworkUrl100,
+            durationInMilliseconds: trackTimeMillis,
+            releaseDate: ISO8601DateFormatter().date(from: self.releaseDate)
         )
     }
 }
