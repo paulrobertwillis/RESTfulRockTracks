@@ -25,14 +25,22 @@ class SearchListTableViewController: UITableViewController, StoryboardInstantiab
         super.viewDidLoad()
 
         self.title = self.viewModel.screenTitle
+        self.setupTableView()
         self.viewModel.load()
+    }
+    
+    private func setupTableView() {
+        let cellNib = UINib(nibName: SearchListItemCell.reuseIdentifier, bundle: nil)
+        self.tableView.register(cellNib, forCellReuseIdentifier: SearchListItemCell.reuseIdentifier)
     }
 }
 
 extension SearchListTableViewController: SearchListTableViewModelDelegate {
     func didSetSearchResults() {
         print(self.viewModel.searchResults)
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         // TODO: Finish
     }
 }
@@ -43,15 +51,33 @@ extension SearchListTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchListItemCell.reuseIdentifier, for: indexPath) as? SearchListItemCell else {
-            assertionFailure("Cannot dequeue reusable cell \(SearchListItemCell.self) with reuseIdentifier: \(SearchListItemCell.reuseIdentifier)")
-            return UITableViewCell()
+        let cellIdentifier = SearchListItemCell.reuseIdentifier
+                
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
+                                                                     for: indexPath) as? SearchListItemCell
+        else {
+            // TODO: assertionFailure here? Check Example MVVM
+            return UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         }
         
         let searchListItemViewModel = SearchListItemViewModel(searchResult: self.viewModel.searchResults[indexPath.row])
-        cell.fill(with: searchListItemViewModel)
+        
+        cell.fill(
+            with: searchListItemViewModel)
         
         return cell
+
+        
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchListItemCell.reuseIdentifier, for: indexPath) as? SearchListItemCell else {
+//            assertionFailure("Cannot dequeue reusable cell \(SearchListItemCell.self) with reuseIdentifier: \(SearchListItemCell.reuseIdentifier)")
+//            return UITableViewCell()
+//        }
+//
+//        let searchListItemViewModel = SearchListItemViewModel(searchResult: self.viewModel.searchResults[indexPath.row])
+//        cell.fill(with: searchListItemViewModel)
+//
+//        return cell
     }
     
 //    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

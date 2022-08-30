@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69638E2628BDE9D8005D5E9D /* SearchListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69638E2528BDE9D8005D5E9D /* SearchListItemCell.xib */; };
 		7B0C2A7828BD265700BC95A8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A7728BD265700BC95A8 /* NetworkService.swift */; };
 		7B0C2A8028BD290600BC95A8 /* RESTfulRockTracksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A7F28BD290600BC95A8 /* RESTfulRockTracksTests.swift */; };
 		7B0C2A8728BD292600BC95A8 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A8628BD292600BC95A8 /* NetworkServiceTests.swift */; };
@@ -29,7 +30,7 @@
 		7B0C2ABB28BD414400BC95A8 /* SearchResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ABA28BD414400BC95A8 /* SearchResultsUseCase.swift */; };
 		7B0C2ABE28BD416C00BC95A8 /* GetSearchResultsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ABD28BD416C00BC95A8 /* GetSearchResultsUseCaseTests.swift */; };
 		7B0C2AC028BD423E00BC95A8 /* SearchResultsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ABF28BD423E00BC95A8 /* SearchResultsRepositoryMock.swift */; };
-		7B0C2AC228BD4DA600BC95A8 /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AC128BD4DA600BC95A8 /* SearchListViewModel.swift */; };
+		7B0C2AC228BD4DA600BC95A8 /* SearchListTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2AC128BD4DA600BC95A8 /* SearchListTableViewModel.swift */; };
 		7B0C2ACB28BD534D00BC95A8 /* SearchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ACA28BD534D00BC95A8 /* SearchListViewModelTests.swift */; };
 		7B0C2ACE28BD592000BC95A8 /* AppDependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ACD28BD592000BC95A8 /* AppDependencyInjectionContainer.swift */; };
 		7B0C2AD028BD5B0900BC95A8 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2ACF28BD5B0900BC95A8 /* AppFlowCoordinator.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69638E2528BDE9D8005D5E9D /* SearchListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListItemCell.xib; sourceTree = "<group>"; };
 		7B0C2A7728BD265700BC95A8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7B0C2A7D28BD290600BC95A8 /* RESTfulRockTracksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RESTfulRockTracksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0C2A7F28BD290600BC95A8 /* RESTfulRockTracksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTfulRockTracksTests.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		7B0C2ABA28BD414400BC95A8 /* SearchResultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsUseCase.swift; sourceTree = "<group>"; };
 		7B0C2ABD28BD416C00BC95A8 /* GetSearchResultsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchResultsUseCaseTests.swift; sourceTree = "<group>"; };
 		7B0C2ABF28BD423E00BC95A8 /* SearchResultsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRepositoryMock.swift; sourceTree = "<group>"; };
-		7B0C2AC128BD4DA600BC95A8 /* SearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
+		7B0C2AC128BD4DA600BC95A8 /* SearchListTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewModel.swift; sourceTree = "<group>"; };
 		7B0C2ACA28BD534D00BC95A8 /* SearchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewModelTests.swift; sourceTree = "<group>"; };
 		7B0C2ACD28BD592000BC95A8 /* AppDependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyInjectionContainer.swift; sourceTree = "<group>"; };
 		7B0C2ACF28BD5B0900BC95A8 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -269,7 +271,7 @@
 		7B0C2AC428BD4E5E00BC95A8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7B0C2AC128BD4DA600BC95A8 /* SearchListViewModel.swift */,
+				7B0C2AC128BD4DA600BC95A8 /* SearchListTableViewModel.swift */,
 				7B0C2ADE28BD806500BC95A8 /* SearchListItemViewModel.swift */,
 			);
 			path = ViewModel;
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0C2ADC28BD7AF600BC95A8 /* SearchListItemCell.swift */,
+				69638E2528BDE9D8005D5E9D /* SearchListItemCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69638E2628BDE9D8005D5E9D /* SearchListItemCell.xib in Resources */,
 				7B3AD94328B7EB0E00B69081 /* LaunchScreen.storyboard in Resources */,
 				7B3AD94028B7EB0E00B69081 /* Assets.xcassets in Resources */,
 				7B3AD93B28B7EB0D00B69081 /* SearchListTableViewController.storyboard in Resources */,
@@ -591,7 +595,7 @@
 				7B3AD93E28B7EB0D00B69081 /* CoreDataStorage.xcdatamodeld in Sources */,
 				7B0C2AA328BD300000BC95A8 /* DataTransferService.swift in Sources */,
 				7B0C2AAA28BD366500BC95A8 /* SearchResult.swift in Sources */,
-				7B0C2AC228BD4DA600BC95A8 /* SearchListViewModel.swift in Sources */,
+				7B0C2AC228BD4DA600BC95A8 /* SearchListTableViewModel.swift in Sources */,
 				7B0C2A9F28BD2F6F00BC95A8 /* ResponseDecoder.swift in Sources */,
 				7B3AD93628B7EB0D00B69081 /* SceneDelegate.swift in Sources */,
 				7B0C2AAD28BD36B700BC95A8 /* SearchResultsResponseDTO.swift in Sources */,

@@ -14,6 +14,8 @@ class SearchListItemCell: UITableViewCell {
     // MARK: - Outlets
     
     @IBOutlet private weak var trackNameLabel: UILabel!
+    @IBOutlet private weak var artistNameLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
     
     // MARK: - Private Properties
     
@@ -23,5 +25,7 @@ class SearchListItemCell: UITableViewCell {
         self.viewModel = viewModel
         
         self.trackNameLabel.text = viewModel.trackName
+        self.artistNameLabel.text = viewModel.artistName
+        self.priceLabel.text = viewModel.price
     }
 }

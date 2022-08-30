@@ -56,6 +56,8 @@ class SearchListTableViewModel: SearchListTableViewModelOutput {
                 // TODO: Use error
                 self.error = error.localizedDescription
             }
+            
+            self.delegate?.didSetSearchResults()
         }
     }
 }
