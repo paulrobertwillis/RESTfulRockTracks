@@ -51,7 +51,6 @@ class SearchListTableViewModel {
         self.searchResultsLoadTask = self.searchResultsUseCase.execute { result in
             switch result {
             case .success(let searchResults):
-                print(searchResults)
                 self.searchResults = searchResults.sortedByAscendingReleaseDate()
             case .failure(let error):
                 // TODO: Use error
