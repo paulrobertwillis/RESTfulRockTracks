@@ -20,6 +20,7 @@ extension SearchResultsResponseDTO {
         let artworkUrl100: String?
         let trackTimeMillis: Int
         let releaseDate: String
+        let trackViewUrl: String
     }
 }
 
@@ -32,7 +33,8 @@ extension SearchResultsResponseDTO.SearchResultDTO {
             price: self.trackPrice,
             artworkUrl: self.artworkUrl100,
             durationInMilliseconds: trackTimeMillis,
-            releaseDate: ISO8601DateFormatter().date(from: self.releaseDate)
+            releaseDate: ISO8601DateFormatter().date(from: self.releaseDate),
+            trackViewUrl: URL(string: self.trackViewUrl)
         )
     }
 }

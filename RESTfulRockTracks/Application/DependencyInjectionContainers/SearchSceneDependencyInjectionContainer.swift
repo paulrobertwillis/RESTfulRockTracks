@@ -58,15 +58,15 @@ class SearchSceneDependencyInjectionContainer {
     
     // MARK: - SearchDetails
     
-    func makeSearchDetailsViewController(searchResult: SearchResult) -> SearchDetailsViewController {
-        let viewModel = self.makeSearchDetailsViewModel(searchResult: searchResult)
+    func makeSearchDetailsViewController(searchResult: SearchResult, actions: SearchDetailsViewModelActions) -> SearchDetailsViewController {
+        let viewModel = self.makeSearchDetailsViewModel(searchResult: searchResult, actions: actions)
         let viewController = SearchDetailsViewController.create(with: viewModel, imagesRepository: self.makeImagesRepository())
         
         return viewController
     }
     
-    func makeSearchDetailsViewModel(searchResult: SearchResult) -> SearchDetailsViewModel {
-        SearchDetailsViewModel(searchResult: searchResult)
+    func makeSearchDetailsViewModel(searchResult: SearchResult, actions: SearchDetailsViewModelActions) -> SearchDetailsViewModel {
+        SearchDetailsViewModel(searchResult: searchResult, actions: actions)
     }
     
     // MARK: - Flow Coordinators

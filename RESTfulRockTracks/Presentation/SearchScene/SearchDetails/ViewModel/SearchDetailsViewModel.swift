@@ -7,11 +7,19 @@
 
 import Foundation
 
+struct SearchDetailsViewModelActions {
+    let navigateToBrowser: (URL) -> Void
+}
+
 protocol SearchDetailsViewModelDelegate {
     func didLoadArtworkImageData() -> Data
 }
 
 class SearchDetailsViewModel {
+    
+    // MARK: - Private Properties
+    
+    private let actions: SearchDetailsViewModelActions?
     
     // MARK: - Public Properties
     
@@ -21,16 +29,20 @@ class SearchDetailsViewModel {
     public let duration: String
     public let releaseDate: String
     public let artworkImagePath: String?
+    public let trackViewUrl: URL?
     
     // MARK: - Init
     
-    init(searchResult: SearchResult) {
+    init(searchResult: SearchResult, actions: SearchDetailsViewModelActions) {
         self.trackName = searchResult.trackName
         self.artistName = searchResult.artistName
         self.price = "$\(searchResult.price)"
         self.duration = searchResult.durationInMilliseconds.millisecondsToMinutesAndSeconds
         self.releaseDate = dateFormatter.string(from: searchResult.releaseDate!)
         self.artworkImagePath = searchResult.artworkUrl
+        self.trackViewUrl = searchResult.trackViewUrl
+        
+        self.actions = actions
     }
     
 
@@ -64,5 +76,12 @@ private extension TimeInterval {
     
     var second: Int {
         Int(truncatingRemainder(dividingBy: 60).rounded())
+    }
+}
+
+extension SearchDetailsViewModel {
+    func didTapMoreDetailsButton() {
+        guard let trackViewUrl = trackViewUrl else { return }
+        self.actions?.navigateToBrowser(trackViewUrl)
     }
 }

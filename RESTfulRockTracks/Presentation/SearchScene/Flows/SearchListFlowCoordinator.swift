@@ -9,7 +9,7 @@ import UIKit
 
 protocol SearchListFlowCoordinatorDependencies {
     func makeSearchListTableViewController(actions: SearchListTableViewModelActions) -> SearchListTableViewController
-    func makeSearchDetailsViewController(searchResult: SearchResult) -> SearchDetailsViewController
+    func makeSearchDetailsViewController(searchResult: SearchResult, actions: SearchDetailsViewModelActions) -> SearchDetailsViewController
 }
 
 class SearchListFlowCoordinator {
@@ -37,7 +37,12 @@ class SearchListFlowCoordinator {
     }
     
     private func showSearchResultDetails(searchResult: SearchResult) {
-        let viewController = self.dependencies.makeSearchDetailsViewController(searchResult: searchResult)
+        let actions = SearchDetailsViewModelActions(navigateToBrowser: self.navigateToBrowser)
+        let viewController = self.dependencies.makeSearchDetailsViewController(searchResult: searchResult, actions: actions)
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func navigateToBrowser(url: URL) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }

@@ -65,6 +65,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain" title="More Details"/>
+                                <connections>
+                                    <action selector="didTapMoreDetailsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mk9-Jj-1Gw"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="al4-Le-Sub">
                                 <rect key="frame" x="157" y="44" width="100" height="100"/>

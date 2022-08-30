@@ -19,4 +19,5 @@ public struct SearchResult: Equatable {
     let artworkUrl: String?
     let durationInMilliseconds: Int
     let releaseDate: Date?
+    let trackViewUrl: URL?
 }

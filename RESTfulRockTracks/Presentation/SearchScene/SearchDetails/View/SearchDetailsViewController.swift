@@ -75,4 +75,10 @@ class SearchDetailsViewController: UIViewController, StoryboardInstantiable {
             }
         }
     }
+    
+    // MARK: - IBActions
+    
+    @IBAction func didTapMoreDetailsButton(_ sender: UIButton) {
+        self.viewModel.didTapMoreDetailsButton()
+    }
 }
