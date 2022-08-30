@@ -13,6 +13,7 @@
 		69638E2F28BE1A1E005D5E9D /* SearchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69638E2E28BE1A1E005D5E9D /* SearchDetailsViewController.swift */; };
 		69638E3128BE1A2C005D5E9D /* SearchDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69638E3028BE1A2C005D5E9D /* SearchDetailsViewController.storyboard */; };
 		69638E3328BE1ACC005D5E9D /* SearchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69638E3228BE1ACC005D5E9D /* SearchDetailsViewModel.swift */; };
+		69638E3728BE494E005D5E9D /* SearchDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69638E3628BE494E005D5E9D /* SearchDetailsViewModelTests.swift */; };
 		7B0C2A7828BD265700BC95A8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A7728BD265700BC95A8 /* NetworkService.swift */; };
 		7B0C2A8028BD290600BC95A8 /* RESTfulRockTracksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A7F28BD290600BC95A8 /* RESTfulRockTracksTests.swift */; };
 		7B0C2A8728BD292600BC95A8 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0C2A8628BD292600BC95A8 /* NetworkServiceTests.swift */; };
@@ -70,6 +71,7 @@
 		69638E2E28BE1A1E005D5E9D /* SearchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewController.swift; sourceTree = "<group>"; };
 		69638E3028BE1A2C005D5E9D /* SearchDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchDetailsViewController.storyboard; sourceTree = "<group>"; };
 		69638E3228BE1ACC005D5E9D /* SearchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewModel.swift; sourceTree = "<group>"; };
+		69638E3628BE494E005D5E9D /* SearchDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		7B0C2A7728BD265700BC95A8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7B0C2A7D28BD290600BC95A8 /* RESTfulRockTracksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RESTfulRockTracksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0C2A7F28BD290600BC95A8 /* RESTfulRockTracksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTfulRockTracksTests.swift; sourceTree = "<group>"; };
@@ -155,6 +157,22 @@
 				69638E2E28BE1A1E005D5E9D /* SearchDetailsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		69638E3428BE4934005D5E9D /* SearchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				69638E3528BE4942005D5E9D /* ViewModel */,
+			);
+			path = SearchDetails;
+			sourceTree = "<group>";
+		};
+		69638E3528BE4942005D5E9D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				69638E3628BE494E005D5E9D /* SearchDetailsViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7B0C2A7328BD25B300BC95A8 /* Domain */ = {
@@ -336,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0C2AC828BD533B00BC95A8 /* SearchList */,
+				69638E3428BE4934005D5E9D /* SearchDetails */,
 			);
 			path = SearchScene;
 			sourceTree = "<group>";
@@ -608,6 +627,7 @@
 				7B0C2AB828BD3D0100BC95A8 /* SearchResultsDataTransferServiceMock.swift in Sources */,
 				7B0C2AA128BD2FED00BC95A8 /* DataTransferServiceTests.swift in Sources */,
 				7B0C2A8728BD292600BC95A8 /* NetworkServiceTests.swift in Sources */,
+				69638E3728BE494E005D5E9D /* SearchDetailsViewModelTests.swift in Sources */,
 				7B0C2A9A28BD2EE800BC95A8 /* ResponseDecoderTests.swift in Sources */,
 				7B0C2ACB28BD534D00BC95A8 /* SearchListViewModelTests.swift in Sources */,
 				7B0C2ABE28BD416C00BC95A8 /* GetSearchResultsUseCaseTests.swift in Sources */,
@@ -853,7 +873,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -882,7 +902,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
