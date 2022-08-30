@@ -5,6 +5,8 @@ Miro board created with initial plan of first screen. It demonstrates the focus 
 
 https://miro.com/app/board/uXjVPb2W7NA=/?share_link_id=798538195872
 
+The actual app strayed from this initial sketch of the architecture, but it offers an insight into how the overall architecture was considered right from the start of the project.
+
 ## Technologies and practices used
 - Git version control
 - Jira-like ticketing in Git
