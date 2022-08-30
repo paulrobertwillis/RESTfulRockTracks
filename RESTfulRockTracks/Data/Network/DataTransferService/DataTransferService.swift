@@ -44,7 +44,8 @@ class DataTransferService<GenericDecodable: Decodable>: DataTransferServiceProto
                 let result: ResultValue = self.decode(data, decoder: decoder)
                 completion(result)
             case .failure(let error):
-                self.resolveAndHandleError(error, completion: completion)
+                let resolvedError = self.resolve(error)
+                completion(.failure(resolvedError))
             }
         }
     }
@@ -63,23 +64,5 @@ class DataTransferService<GenericDecodable: Decodable>: DataTransferServiceProto
     
     private func resolve(_ error: Error) -> DataTransferError {
         return DataTransferError.parsingFailure(error)
-    }
-    
-//    private func handleSuccessfulRequest(for data: Data?, completion: CompletionHandler) {
-//        do {
-//            try self.decodeAndHandleResult(from: data, completion: completion)
-//        } catch(let error) {
-//            self.resolveAndHandleError(error, completion: completion)
-//        }
-//    }
-//
-//    private func decodeAndHandleResult(from data: Data?, completion: CompletionHandler) throws {
-//        let result: ResultValue = try self.decode(data)
-//        completion(result)
-//    }
-//
-    private func resolveAndHandleError(_ error: Error, completion: CompletionHandler) {
-        let resolvedError = self.resolve(error)
-        completion(.failure(resolvedError))
     }
 }
