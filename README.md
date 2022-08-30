@@ -6,6 +6,8 @@ Miro board created with initial plan of first screen. It demonstrates the focus 
 https://miro.com/app/board/uXjVPb2W7NA=/?share_link_id=798538195872
 
 Technologies and practices used:
+- Git version control
+- Jira-like ticketing in Git
 - MVVM
 - TDD
 - Unit testing
@@ -49,4 +51,12 @@ Any actions that must be taken by View Models are created in another layer - the
 
 Sitting "above" and also "beside" the three main layers of the app, the **Application Layer** is the first to be created upon app startup. Holding the Coordinators of MVVM-C architecture and the Dependency-Injection Containers that hold many of the strong references present in the app, this layer exists to simplify the interaction of other layers and reduce their interdependency. By using an Application Layer, it is possible to increase app testability and extensibility at the expense of additional complexity.
 
+## Future Changes
 
+Some ideas for future improvements to the app include:
+- Better handling of slow Internet speeds (show visual cues to user such as activity indicator, and present an error when requests time out).
+- Better implement asynchronous programming, such as through the use of async/await.
+- Remove force unwrapping where it has been temporarily used for haste.
+- Expand tests to include View Models and other areas of the app that had TDD abandoned as a result of time constraints.
+- Similarly: improve tests to account for multithreading.
+- Improve UI and UX to make the app more appealing to use.
