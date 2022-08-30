@@ -55,7 +55,6 @@ class SearchListItemCell: UITableViewCell {
             case .success(let data):
                 self.artworkImageView.image = UIImage(data: data)
             case .failure(let error):
-                print(error)
                 self.artworkImageView.image = UIImage(named: "PlaceholderArtworkImage")
             }
         }
