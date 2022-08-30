@@ -7,14 +7,20 @@
 
 import Foundation
 
-class SearchResultsRepository: SearchResultsRepositoryProtocol {
+class SearchResultsRepository {
+    
+    // MARK: - Private Properties
     
     private let dataTransferService: DataTransferService<SearchResultsResponseDTO>
+    
+    // MARK: - Init
     
     init(dataTransferService: DataTransferService<SearchResultsResponseDTO>) {
         self.dataTransferService = dataTransferService
     }
-    
+}
+
+extension SearchResultsRepository: SearchResultsRepositoryProtocol {
     @discardableResult
     func getSearchResults(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask? {
         let decoder = JSONResponseDecoder()

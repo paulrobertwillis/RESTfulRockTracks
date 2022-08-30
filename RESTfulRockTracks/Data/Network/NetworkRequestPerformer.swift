@@ -14,7 +14,6 @@ protocol NetworkRequestPerformerProtocol {
 }
 
 class NetworkRequestPerformer: NetworkRequestPerformerProtocol {
-    // TODO: Replace URLRequest here with NetworkRequest?
     func request(request: URLRequest, completion: @escaping CompletionHandler) -> URLSessionTask {
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: completion)

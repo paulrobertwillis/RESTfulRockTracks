@@ -43,11 +43,15 @@ class SearchListTableViewController: UITableViewController, StoryboardInstantiab
     }
 }
 
+// MARK: - SearchListTableViewModelDelegate
+
 extension SearchListTableViewController: SearchListTableViewModelDelegate {
     func didSetSearchResults() {
         self.tableView.reloadData()
     }
 }
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension SearchListTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,17 +62,14 @@ extension SearchListTableViewController {
         let cellIdentifier = SearchListItemCell.reuseIdentifier
                 
         guard
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
-                                                                     for: indexPath) as? SearchListItemCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SearchListItemCell
         else {
             assertionFailure("Cannot dequeue reusable cell \(SearchListItemCell.self) with reuseIdentifier: \(SearchListItemCell.reuseIdentifier)")
             return UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         }
         
         let searchListItemViewModel = SearchListItemViewModel(searchResult: self.viewModel.searchResults[indexPath.row])
-        
         cell.fill( with: searchListItemViewModel, imagesRepository: self.imagesRepository)
-        
         return cell
     }
         

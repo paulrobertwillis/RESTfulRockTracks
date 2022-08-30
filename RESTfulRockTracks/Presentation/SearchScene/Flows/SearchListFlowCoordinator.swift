@@ -28,6 +28,8 @@ class SearchListFlowCoordinator {
         self.dependencies = dependencies
     }
     
+    // MARK: - API
+    
     func start() {
         let actions = SearchListTableViewModelActions(showSearchResultDetails: self.showSearchResultDetails)
         let viewController = self.dependencies.makeSearchListTableViewController(actions: actions)
@@ -35,6 +37,8 @@ class SearchListFlowCoordinator {
         self.navigationController?.pushViewController(viewController, animated: false)
         self.searchListTableViewController = viewController
     }
+    
+    // MARK: - Actions
     
     private func showSearchResultDetails(searchResult: SearchResult) {
         let actions = SearchDetailsViewModelActions(navigateToBrowser: self.navigateToBrowser)

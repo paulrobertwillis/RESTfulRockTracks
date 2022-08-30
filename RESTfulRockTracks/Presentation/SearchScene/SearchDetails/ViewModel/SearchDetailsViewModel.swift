@@ -45,8 +45,12 @@ class SearchDetailsViewModel {
         self.actions = actions
     }
     
-
+    // MARK: - API
     
+    func didTapMoreDetailsButton() {
+        guard let trackViewUrl = trackViewUrl else { return }
+        self.actions?.navigateToBrowser(trackViewUrl)
+    }
 }
 
 private let dateFormatter: ISO8601DateFormatter = {
@@ -76,12 +80,5 @@ private extension TimeInterval {
     
     var second: Int {
         Int(truncatingRemainder(dividingBy: 60).rounded())
-    }
-}
-
-extension SearchDetailsViewModel {
-    func didTapMoreDetailsButton() {
-        guard let trackViewUrl = trackViewUrl else { return }
-        self.actions?.navigateToBrowser(trackViewUrl)
     }
 }

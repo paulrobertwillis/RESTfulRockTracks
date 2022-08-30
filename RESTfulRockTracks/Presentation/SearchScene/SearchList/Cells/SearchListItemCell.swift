@@ -46,6 +46,7 @@ class SearchListItemCell: UITableViewCell {
     
     private func updateArtworkImage() {
         self.artworkImageView.image = nil
+        
         guard let artworkImagePath = self.viewModel.artworkImagePath,
               let url = URL(string: artworkImagePath)
         else {
@@ -53,7 +54,7 @@ class SearchListItemCell: UITableViewCell {
         }
         
         let urlRequest = URLRequest(url: url)
-                
+        
         self.artworkImagesRepository?.getImage(request: urlRequest) { [weak self] result in
             guard let self = self else { return }
             

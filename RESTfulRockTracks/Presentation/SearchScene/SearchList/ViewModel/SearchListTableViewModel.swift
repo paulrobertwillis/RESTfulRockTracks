@@ -26,9 +26,10 @@ class SearchListTableViewModel {
         
     // MARK: - Public Properties
     
+    let screenTitle = NSLocalizedString("Rock Tracks", comment: "")
+
     public weak var delegate: SearchListTableViewModelDelegate?
     
-    let screenTitle = NSLocalizedString("Rock Tracks", comment: "")
     var error: String?
     
     public var searchResults: [SearchResult] = [] {

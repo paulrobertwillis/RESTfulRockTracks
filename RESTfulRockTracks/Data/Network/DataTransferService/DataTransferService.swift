@@ -34,6 +34,8 @@ class DataTransferService<GenericDecodable: Decodable>: DataTransferServiceProto
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
     }
+    
+    // MARK: - API
         
     @discardableResult
     func request(_ request: URLRequest, decoder: ResponseDecoderProtocol, completion: @escaping (Result<GenericDecodable, DataTransferError>) -> Void) -> URLSessionTask? {
